@@ -1,0 +1,420 @@
+/* =========================================================
+   THE BLOOM — общий стиль сайта
+   Палитра: лесной зелёный / айвори / пудровый розовый / золото
+========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@400;500;600&display=swap');
+
+:root {
+  --forest: #2F3B2A;
+  --forest-dark: #212B1E;
+  --ivory: #FBF6EC;
+  --blush: #E7B7BE;
+  --gold: #C69B4E;
+  --sage: #DCE4D3;
+  --charcoal: #262620;
+}
+
+/* ---------- Элементные селекторы (глобальный сброс и база) ---------- */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--ivory);
+  color: var(--charcoal);
+  font-family: 'Jost', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0 0 0.6em 0;
+  color: var(--forest-dark);
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 2.1rem; }
+h3 { font-size: 1.4rem; }
+
+p {
+  max-width: 65ch;
+  margin: 0 0 1em 0;
+}
+
+a {
+  color: var(--forest-dark);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--gold);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul, ol {
+  padding-left: 1.3rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+}
+
+th, td {
+  padding: 0.9rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--sage);
+}
+
+th {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  color: var(--forest-dark);
+  background: var(--sage);
+}
+
+/* ---------- Layout helpers ---------- */
+
+.container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+.section {
+  padding: 4rem 0;
+}
+
+.section--tight {
+  padding: 2.5rem 0;
+}
+
+/* ---------- ID-селекторы: уникальные блоки страницы ---------- */
+
+#main-header {
+  background: var(--forest);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+#hero {
+  background: linear-gradient(120deg, var(--forest) 45%, var(--forest-dark) 100%);
+  color: var(--ivory);
+  padding: 5rem 0;
+}
+
+#hero h1 {
+  color: var(--ivory);
+}
+
+#site-footer {
+  background: var(--forest-dark);
+  color: var(--sage);
+  padding: 3rem 0 2rem 0;
+  margin-top: 3rem;
+}
+
+#contact-form {
+  background: var(--sage);
+  border-radius: 4px;
+  padding: 2.5rem;
+  max-width: 640px;
+}
+
+/* ---------- Класс-селекторы: переиспользуемые компоненты ---------- */
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.brand img {
+  width: 38px;
+  height: 38px;
+}
+
+.brand span {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--ivory);
+  letter-spacing: 0.02em;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 1.8rem;
+  margin: 0;
+  padding: 0;
+}
+
+/* Descendant selector: ссылки только внутри навигации */
+.nav-menu a {
+  color: var(--ivory);
+  font-size: 0.98rem;
+  padding: 0.3rem 0.1rem;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+  border-bottom: 2px solid var(--gold);
+  color: var(--gold);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.eyebrow {
+  color: var(--blush);
+  font-size: 0.95rem;
+  margin-bottom: 0.8rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.85rem 2rem;
+  border-radius: 2px;
+  border: 2px solid var(--gold);
+  background: var(--gold);
+  color: var(--forest-dark);
+  font-family: 'Jost', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.btn:hover {
+  background: transparent;
+  color: var(--gold);
+}
+
+.btn--outline {
+  background: transparent;
+  color: var(--ivory);
+  border-color: var(--ivory);
+}
+
+.btn--outline:hover {
+  background: var(--ivory);
+  color: var(--forest-dark);
+}
+
+.section-heading {
+  text-align: left;
+  max-width: 640px;
+  margin-bottom: 2.5rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.8rem;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid var(--sage);
+  border-radius: 6px;
+  padding: 1.6rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(47, 59, 42, 0.12);
+}
+
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.card .price {
+  color: var(--gold);
+  font-weight: 600;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+}
+
+.card .ingredients {
+  font-size: 0.88rem;
+  color: #6b6b60;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.profile-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 4px solid var(--blush);
+  object-fit: cover;
+}
+
+.team-member {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  margin-bottom: 2.5rem;
+}
+
+.divider-banner img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.hero-grid img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.tag-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.tag-list li {
+  background: var(--sage);
+  padding: 0.4rem 0.9rem;
+  border-radius: 20px;
+  font-size: 0.88rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.footer-grid h3 {
+  color: var(--ivory);
+  font-size: 1.1rem;
+}
+
+.footer-credit {
+  border-top: 1px solid rgba(255,255,255,0.15);
+  margin-top: 2rem;
+  padding-top: 1.2rem;
+  font-size: 0.85rem;
+  color: #a9b3a2;
+}
+
+.form-row {
+  margin-bottom: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-row label {
+  font-weight: 500;
+  font-size: 0.92rem;
+}
+
+.form-row input[type="text"],
+.form-row input[type="email"],
+.form-row input[type="date"],
+.form-row select,
+.form-row textarea {
+  padding: 0.7rem 0.9rem;
+  border: 1px solid #c7cfc0;
+  border-radius: 4px;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.95rem;
+  background: var(--ivory);
+}
+
+.form-row input:focus,
+.form-row select:focus,
+.form-row textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+  background: #fff;
+}
+
+.color-options {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.color-options label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.room-highlight {
+  background: var(--forest);
+  color: var(--ivory);
+  border-radius: 6px;
+  padding: 2rem;
+}
+
+.room-highlight h3 {
+  color: var(--blush);
+}
+
+/* ---------- Адаптив ---------- */
+
+@media (max-width: 760px) {
+  .hero-grid,
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-menu {
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  h1 { font-size: 2.2rem; }
+
+  .team-member {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}

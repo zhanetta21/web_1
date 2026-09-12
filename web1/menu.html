@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Assignment #1: HTML & CSS Basics — Team "The Bloom" -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu — The Bloom</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header id="main-header">
+    <div class="container top-bar">
+      <a href="index.html" class="brand">
+        <img src="images/logo.svg" alt="The Bloom cafe logo — a flower mark">
+        <span>The Bloom</span>
+      </a>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="menu.html" class="active">Menu</a></li>
+          <li><a href="reserve.html">Reserve</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="divider-banner">
+    <img src="https://images.unsplash.com/photo-1623334044303-241021148842?auto=format&fit=crop&w=1600&q=80" alt="Fresh croissants laid out on a table">
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-heading">
+        <h1>Menu</h1>
+        <p>Drinks and desserts we make fresh every day from quality ingredients.</p>
+      </div>
+
+      <h2>Drinks</h2>
+      <div class="card-grid">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1497636577773-f1231844b336?auto=format&fit=crop&w=500&q=80" alt="Lavender latte with foam art">
+          <h3>Lavender Latte</h3>
+          <p class="ingredients">Espresso, milk, lavender syrup, foam</p>
+          <p class="price">$3.80</p>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1497636577773-f1231844b336?auto=format&fit=crop&w=500&q=80" alt="Classic cappuccino in a cup">
+          <h3>Cappuccino</h3>
+          <p class="ingredients">Espresso, steamed milk</p>
+          <p class="price">$3.00</p>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1647894111425-da74951dfe10?auto=format&fit=crop&w=500&q=80" alt="Hibiscus tea with rose petals">
+          <h3>Rosebud Tea</h3>
+          <p class="ingredients">Hibiscus, rose petals, honey</p>
+          <p class="price">$2.70</p>
+        </div>
+      </div>
+
+      <h2 style="margin-top: 3rem;">Desserts</h2>
+      <div class="card-grid">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1623334044303-241021148842?auto=format&fit=crop&w=500&q=80" alt="Almond croissant with powdered sugar">
+          <h3>Almond Croissant</h3>
+          <p class="ingredients">Puff pastry, almond cream, powdered sugar</p>
+          <p class="price">$3.00</p>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1702925614886-50ad13c88d3f?auto=format&fit=crop&w=500&q=80" alt="Berry cheesecake slice on a plate">
+          <h3>Bloom Cheesecake</h3>
+          <p class="ingredients">Cream cheese, berry coulis, biscuit base</p>
+          <p class="price">$4.30</p>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1702925614886-50ad13c88d3f?auto=format&fit=crop&w=500&q=80" alt="Carrot cake slice">
+          <h3>Carrot Cake</h3>
+          <p class="ingredients">Carrot, walnut, cream cheese frosting</p>
+          <p class="price">$4.10</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section--tight" style="background: var(--sage);">
+    <div class="container">
+      <h2>Menu of the day</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Dish</th>
+            <th>Main ingredients</th>
+            <th>Calories</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Bloom Breakfast</td>
+            <td>Poached egg, avocado, toast</td>
+            <td>380 kcal</td>
+            <td>$6.00</td>
+          </tr>
+          <tr>
+            <td>Berry Oatmeal</td>
+            <td>Oats, mixed berries, honey</td>
+            <td>310 kcal</td>
+            <td>$4.60</td>
+          </tr>
+          <tr>
+            <td>Chicken Sandwich</td>
+            <td>Chicken breast, ciabatta, sauce</td>
+            <td>420 kcal</td>
+            <td>$5.20</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer id="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>The Bloom</h3>
+        <p>A cafe where every drink is a small bouquet.</p>
+      </div>
+      <div>
+        <h3>Navigation</h3>
+        <ul style="list-style:none; padding:0;">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="reserve.html">Reserve</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Project team</h3>
+        <p>Full Name 1 — group SE-25XX<br>Full Name 2 — group SE-25XX</p>
+      </div>
+    </div>
+    <div class="container footer-credit">
+      &copy; 2026 The Bloom Cafe. Student project — Assignment #1, Astana IT University.
+    </div>
+  </footer>
+
+</body>
+</html>
