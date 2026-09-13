@@ -97,20 +97,31 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin: 1.5rem 0;
-}
-
-th,
-td {
-  padding: 0.9rem 1rem;
-  text-align: left;
-  border-bottom: 1px solid var(--sage);
+  background: var(--white);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 th {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.1rem;
-  color: var(--forest-dark);
-  background: var(--sage);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--ivory);
+  background: var(--forest);
+  padding: 0.9rem 1.2rem;
+  text-align: left;
+}
+
+td {
+  padding: 0.85rem 1.2rem;
+  color: var(--charcoal);
+  border-bottom: 1px solid var(--sage);
+  font-size: 0.95rem;
+}
+
+tr:last-child td {
+  border-bottom: none;
 }
 
 /* Layout */
