@@ -570,3 +570,88 @@ tr:last-child td {
     padding: 1.5rem;
   }
 }
+
+/* --- TASK 3: PAGE LAYOUT WITH GRID AREAS --- */
+.grid-page-container {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  grid-template-areas: "sidebar main";
+  gap: 2rem;
+  width: min(1100px, 92%);
+  margin: 3rem auto;
+}
+
+.grid-sidebar {
+  grid-area: sidebar;
+  background: var(--sage);
+  padding: 1.5rem;
+  border-radius: 8px;
+  height: fit-content;
+}
+
+.grid-main {
+  grid-area: main;
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+/* --- TASK 4: IMAGE GALLERY GRID & HOVER EFFECT --- */
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  aspect-ratio: 4 / 3;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+/* Caption overlay on hover */
+.gallery-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(37, 53, 40, 0.85);
+  color: var(--ivory);
+  padding: 0.8rem 1rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  text-align: center;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+.gallery-item:hover .gallery-caption {
+  transform: translateY(0);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .image-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid-page-container {
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+      "sidebar"
+      "main";
+  }
+}

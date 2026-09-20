@@ -30,7 +30,24 @@
     <img src="images/v5.jpg" alt="Cozy cafe interior with plants and a garden view">
   </div>
 
-  <section class="section">
+  <!-- PAGE LAYOUT WITH GRID AREAS (Task 3) -->
+  <div class="grid-page-container">
+    <aside class="grid-sidebar">
+      <h3>Quick Navigation</h3>
+      <ul>
+        <li><a href="#story">Our Story</a></li>
+        <li><a href="#team">The Team</a></li>
+        <li><a href="#gallery">Atmosphere</a></li>
+      </ul>
+    </aside>
+    
+    <main class="grid-main">
+      <h2>Detailed Overview</h2>
+      <p>Here you can place the main articles and additional info about the cafe project development.</p>
+    </main>
+  </div>
+
+  <section class="section" id="story">
     <div class="container">
       <div class="section-heading">
         <h1>About Us</h1>
@@ -49,7 +66,7 @@
     </div>
   </section>
 
-  <section class="section--tight" style="background: var(--sage);">
+  <section class="section--tight" style="background: var(--sage);" id="team">
     <div class="container">
       <h2>About the team members</h2>
 
@@ -72,7 +89,7 @@
   </section>
 
   <!-- PHOTO GALLERY (Task 4) -->
-  <section class="section">
+  <section class="section" id="gallery">
     <div class="container">
       <div class="section-heading">
         <h2>Atmosphere Gallery</h2>
@@ -82,7 +99,7 @@
       <div class="image-gallery">
         <div class="gallery-item">
           <img src="images/mainhall.jpg" alt="Main hall interior with comfortable seats">
-          <div class="gallery-caption">Cozy Hall Interior</div>
+          <div class="gallery-caption">Main Hall</div>
         </div>
         <div class="gallery-item">
           <img src="images/hall2.jpg" alt="Aesthetic dining table setup">
@@ -90,7 +107,7 @@
         </div>
         <div class="gallery-item">
           <img src="images/hall3.jpg" alt="Ceiling decorated with blooming flowers">
-          <div class="gallery-caption">Green Corner</div>
+          <div class="gallery-caption">Floral Ceiling</div>
         </div>
         <div class="gallery-item">
           <img src="images/hall4.jpg" alt="Warm evening illumination in the cafe">
@@ -98,11 +115,11 @@
         </div>
         <div class="gallery-item">
           <img src="images/bath.jpg" alt="Aesthetic pink bathroom with floral accents">
-          <div class="gallery-caption">Botanical Decor</div>
+          <div class="gallery-caption">Pink Restroom</div>
         </div>
         <div class="gallery-item">
           <img src="images/decor.jpg" alt="Interior decor with cafe logo details">
-          <div class="gallery-caption">Little Details</div>
+          <div class="gallery-caption">Logo & Details</div>
         </div>
       </div>
     </div>
