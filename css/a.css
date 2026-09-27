@@ -655,3 +655,42 @@ tr:last-child td {
       "main";
   }
 }
+/* Fix image sizes for Assignment 3 */
+
+.assignment-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.bloom-bootstrap-card {
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+.bloom-bootstrap-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Hero photos */
+.hero-gallery img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+
+    .assignment-card img,
+    .bloom-bootstrap-card img {
+        height: 180px;
+    }
+
+    .hero-gallery img {
+        height: 170px;
+    }
+}
