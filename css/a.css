@@ -236,36 +236,6 @@ tr:last-child td {
   margin-bottom: 0.8rem;
 }
 
-/* Buttons */
-.btn {
-  display: inline-block;
-  padding: 0.85rem 2rem;
-  border-radius: 3px;
-  border: 2px solid var(--gold);
-  background: var(--gold);
-  color: var(--forest-dark);
-  font-family: 'Jost', sans-serif;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
-}
-
-.btn:hover {
-  background: transparent;
-  color: var(--gold);
-  transform: translateY(-2px);
-}
-
-.btn--outline {
-  background: transparent;
-  color: var(--ivory);
-  border-color: var(--ivory);
-}
-
-.btn--outline:hover {
-  background: var(--ivory);
-  color: var(--forest-dark);
-}
 
 /* Section heading */
 .section-heading {
@@ -290,7 +260,7 @@ tr:last-child td {
 /* Card grid */
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.8rem;
   align-items: stretch;
 }
@@ -506,13 +476,11 @@ tr:last-child td {
 
 /* Responsive tablet */
 @media (max-width: 1000px) {
-  .card-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
+  
 }
 
 /* Responsive mobile and tablet */
-@media (max-width: 760px) {
+@media (max-width: 991px) {
   .hero-grid,
   .info-grid {
     grid-template-columns: 1fr;
@@ -653,5 +621,71 @@ tr:last-child td {
     grid-template-areas: 
       "sidebar"
       "main";
+  }
+}
+
+/* ===== Assignment 3: Responsive Typography ===== */
+
+/* Desktop */
+.responsive-heading {
+    font-size: 3rem;
+}
+
+.responsive-paragraph {
+    font-size: 1rem;
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+    .responsive-heading {
+        font-size: 2.5rem;
+    }
+
+    .responsive-paragraph {
+        font-size: 0.95rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    .responsive-heading {
+        font-size: 2rem;
+    }
+
+    .responsive-paragraph {
+        font-size: 0.9rem;
+    }
+}
+
+/* Assignment 3 - Responsive Typography */
+
+/* Desktop */
+.responsive-heading {
+  font-size: 3rem;
+}
+
+.responsive-paragraph {
+  font-size: 1rem;
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+  .responsive-heading {
+    font-size: 2.5rem;
+  }
+
+  .responsive-paragraph {
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .responsive-heading {
+    font-size: 2rem;
+  }
+
+  .responsive-paragraph {
+    font-size: 0.9rem;
   }
 }
