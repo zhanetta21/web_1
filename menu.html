@@ -1,235 +1,457 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <!-- Assignment #1: HTML & CSS Basics — Team "The Bloom" -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Menu — The Bloom</title>
+
+  <!-- Bootstrap 5 -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+  <!-- Our CSS -->
   <link rel="stylesheet" href="css/a.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
+
 <body>
 
-  <header id="main-header">
+<!-- =====================================================
+     NAVBAR (приведено к стилю index.html)
+     ===================================================== -->
+<header id="main-header">
+  <nav class="navbar navbar-expand-lg p-0">
     <div class="container top-bar">
-      <a href="index.html" class="brand">
-        <img src="images/logo.svg" alt="The Bloom cafe logo — a flower mark">
+      <a href="index.html" class="brand navbar-brand">
+        <img
+          src="images/logo.svg"
+          alt="The Bloom cafe logo — a flower mark">
         <span>The Bloom</span>
       </a>
-      <nav>
-        <ul class="nav-menu">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="menu.html" class="active">Menu</a></li>
-          <li><a href="reserve.html">Reserve</a></li>
+
+      <!-- Hamburger menu -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#mainNavigation"
+        aria-controls="mainNavigation"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNavigation">
+        <ul class="navbar-nav nav-menu ms-auto">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="menu.html" class="nav-link active">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a href="reserve.html" class="nav-link">Reserve</a>
+          </li>
         </ul>
-      </nav>
+      </div>
     </div>
-  </header>
+  </nav>
+</header>
 
-  <div class="divider-banner">
-    <img src="images/v6.jpg" alt="smiski">
+<!-- =====================================================
+     PAGE HEADER
+     ===================================================== -->
+<section class="py-5">
+  <div class="container text-center">
+    <p class="eyebrow mb-2">
+      The Bloom Cafe
+    </p>
+    <h1 class="responsive-heading mb-3">
+      Our Menu
+    </h1>
+    <p class="responsive-paragraph mx-auto">
+      Drinks and desserts we make fresh every day from quality ingredients.
+    </p>
   </div>
+</section>
 
-  <section class="section">
-    <div class="container">
-      <div class="section-heading">
-        <h1>Menu</h1>
-        <p>Drinks and desserts we make fresh every day from quality ingredients.</p>
-      </div>
-<!-- Drinks -->
+<!-- =====================================================
+     DRINKS
+     ===================================================== -->
+<section class="section pt-0">
+  <div class="container">
+    <div class="section-heading">
       <h2>Drinks</h2>
-      <div class="card-grid">
-        <div class="card">
-          <img src="images/lavenderlatte.jpg" alt="Lavender latte">
-          <h3>Lavender Latte</h3>
-          <p class="ingredients">Espresso, milk, lavender syrup, foam</p>
-          <p class="price">$3.80</p>
-        </div>
-        <div class="card">
-          <img src="images/latte.jpg" alt="Classic latte">
-          <h3>Latte</h3>
-          <p class="ingredients">Espresso, lots of steamed milk, thin foam layer</p>
-          <p class="price">$3.40</p>
-        </div>
-        <div class="card">
-          <img src="images/icelatte.jpg" alt="Refreshing iced latte">
-          <h3>Iced Latte</h3>
-          <p class="ingredients">Espresso, cold milk, ice cubes</p>
-          <p class="price">$3.70</p>
-        </div>
-        <div class="card">
-          <img src="images/cappuccino.jpg" alt="Classic cappuccino">
-          <h3>Cappuccino</h3>
-          <p class="ingredients">Espresso, steamed milk</p>
-          <p class="price">$3.00</p>
-        </div>
-        <div class="card">
-          <img src="images/americano.jpg" alt="Classic Americano coffee">
-          <h3>Americano</h3>
-          <p class="ingredients">Espresso, hot water</p>
-          <p class="price">$2.50</p>
-        </div>
-        <div class="card">
-          <img src="images/raf.jpg" alt="Classic raf coffee">
-          <h3>Raf Coffee</h3>
-          <p class="ingredients">Espresso, heavy cream, vanilla sugar</p>
-          <p class="price">$3.90</p>
-        </div>
-        <div class="card">
-          <img src="images/rosebudtea.jpg" alt="Hibiscus tea with rose petals">
-          <h3>Rosebud Tea</h3>
-          <p class="ingredients">Hibiscus, rose petals, honey</p>
-          <p class="price">$2.70</p>
-        </div>
-        <div class="card">
-          <img src="images/matchalatte.jpg" alt="Matcha latte">
-          <h3>Matcha Latte</h3>
-          <p class="ingredients">Matcha powder, steamed milk, foam</p>
-          <p class="price">$3.50</p>
-        </div>
-        <div class="card">
-          <img src="images/icedmangomatcha.jpg" alt="Iced mango matcha latte">
-          <h3>Iced Mango Matcha</h3>
-          <p class="ingredients">Matcha powder, milk, mango puree, ice</p>
-          <p class="price">$4.20</p>
-        </div>
-        <div class="card">
-          <img src="images/frappuccino.jpg" alt="Frappuccino">
-          <h3>Frappuccino</h3>
-          <p class="ingredients">Blended espresso, milk, ice, whipped cream</p>
-          <p class="price">$4.50</p>
-        </div>
-        <div class="card">
-          <img src="images/mojitolemonade.jpg" alt="Mojito lemonade">
-          <h3>Mojito Lemonade</h3>
-          <p class="ingredients">Lime, fresh mint, soda water, sugar syrup</p>
-          <p class="price">$3.60</p>
-        </div>
-        <div class="card">
-          <img src="images/water.jpg" alt="Bottle of pure water">
-          <h3>Water</h3>
-          <p class="ingredients">Still or sparkling mineral water</p>
-          <p class="price">$0.75</p>
-        </div>
-      </div> 
-      <!-- Desserts -->
-      <h2 style="margin-top: 3rem;">Desserts</h2>
-      <div class="card-grid">
-        <div class="card">
-          <img src="images/napoleon.jpg" alt="Classic Napoleon cake">
-          <h3>Napoleon</h3>
-          <p class="ingredients">Crispy puff pastry, delicate vanilla custard cream</p>
-          <p class="price">$4.20</p>
-        </div>
-        <div class="card">
-          <img src="images/newyork.jpg" alt="New York cheesecake">
-          <h3>New York Cheesecake</h3>
-          <p class="ingredients">Cream cheese, buttery biscuit base, vanilla</p>
-          <p class="price">$4.50</p>
-        </div>
-        <div class="card">
-          <img src="images/classic.jpg" alt="Classic honey cake">
-          <h3>Classic Medovik</h3>
-          <p class="ingredients">Honey sponge layers, smooth sour cream frosting</p>
-          <p class="price">$4.30</p>
-        </div>
-        <div class="card">
-          <img src="images/cinnabon.jpg" alt="Cinnamon roll with cream cheese frosting">
-          <h3>Cinnamon Cinnabon</h3>
-          <p class="ingredients">Soft cinnamon roll, brown sugar, creamy frosting</p>
-          <p class="price">$3.80</p>
-        </div>
-        <div class="card">
-          <img src="images/eclair.jpg" alt="Classic eclair with cream filling">
-          <h3>Eclair</h3>
-          <p class="ingredients">Choux pastry, delicate vanilla cream, chocolate glaze</p>
-          <p class="price">$3.50</p>
-        </div>
-        <div class="card">
-          <img src="images/tiramisu.jpg" alt="Classic tiramisu">
-          <h3>Tiramisu</h3>
-          <p class="ingredients">Mascarpone cream, coffee-soaked ladyfingers, cocoa</p>
-          <p class="price">$4.70</p>
-        </div>
-        <div class="card">
-          <img src="images/macarons.jpg" alt="Colorful French macarons">
-          <h3>Macarons</h3>
-          <p class="ingredients">Almond meringue shells, smooth assorted fillings</p>
-          <p class="price">$3.90</p>
-        </div>
-        <div class="card">
-          <img src="images/chia.jpg" alt="Chia pudding with mango">
-          <h3>Chia Pudding with Mango</h3>
-          <p class="ingredients">Chia seeds, coconut milk, fresh mango</p>
-          <p class="price">$4.00</p>
-        </div>
-        <div class="card">
-          <img src="images/rawcheesecake.jpg" alt="Raw raspberry cheesecake">
-          <h3>Raw Raspberry Cheesecake</h3>
-          <p class="ingredients">Cashew cream, raspberry, almond-date crust</p>
-          <p class="price">$4.60</p>
+      <p>Our most popular drinks and signature beverages.</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- 1 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 bloom-bootstrap-card">
+          <img src="images/lavenderlatte.jpg" class="card-img-top" alt="Lavender latte">
+          <div class="card-body d-flex flex-column">
+            <h3 class="card-title h5">Lavender Latte</h3>
+            <p class="card-text flex-grow-1">Espresso, milk, lavender syrup, foam</p>
+            <p class="price mb-0">$3.80</p>
+          </div>
         </div>
       </div>
-<!-- Breakfasts -->
-      <h2 style="margin-top: 3rem;">Breakfasts</h2>
-      <div class="card-grid">
-        <div class="card">
-          <img src="images/break1.jpg" alt="Bloom Breakfast plate">
-          <h3>Bloom Breakfast</h3>
-          <p class="ingredients">Poached egg, fresh avocado, toasted sourdough bread</p>
-          <p class="price">$6.00</p>
+      <!-- 2 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 bloom-bootstrap-card">
+          <img src="images/latte.jpg" class="card-img-top" alt="Classic latte">
+          <div class="card-body d-flex flex-column">
+            <h3 class="card-title h5">Latte</h3>
+            <p class="card-text flex-grow-1">Espresso, lots of steamed milk, thin foam layer</p>
+            <p class="price mb-0">$3.40</p>
+          </div>
         </div>
-        <div class="card">
-          <img src="images/chicken-sandwich.jpg" alt="Chicken Sandwich on ciabatta">
-          <h3>Chicken Sandwich</h3>
-          <p class="ingredients">Grilled chicken breast, crispy ciabatta, signature sauce</p>
-          <p class="price">$5.20</p>
+      </div>
+      <!-- 3 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 bloom-bootstrap-card">
+          <img src="images/icelatte.jpg" class="card-img-top" alt="Refreshing iced latte">
+          <div class="card-body d-flex flex-column">
+            <h3 class="card-title h5">Iced Latte</h3>
+            <p class="card-text flex-grow-1">Espresso, cold milk, ice cubes</p>
+            <p class="price mb-0">$3.70</p>
+          </div>
         </div>
-        <div class="card">
-          <img src="images/syrniki.jpg" alt="Cottage cheese pancakes with sour cream">
-          <h3>Classic Syrniki</h3>
-          <p class="ingredients">Cottage cheese pancakes, sour cream, berry jam</p>
-          <p class="price">$4.20</p>
+      </div>
+      <!-- 4 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 bloom-bootstrap-card">
+          <img src="images/cappuccino.jpg" class="card-img-top" alt="Classic cappuccino">
+          <div class="card-body d-flex flex-column">
+            <h3 class="card-title h5">Cappuccino</h3>
+            <p class="card-text flex-grow-1">Espresso, steamed milk</p>
+            <p class="price mb-0">$3.00</p>
+          </div>
         </div>
-        <div class="card">
-          <img src="images/english-breakfast.jpg" alt="Full English breakfast plate">
-          <h3>Full English Breakfast</h3>
-          <p class="ingredients">Fried eggs, sausages, beans, mushrooms, toasted bread</p>
-          <p class="price">$5.80</p>
+      </div>
+      <!-- 5 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 bloom-bootstrap-card">
+          <img src="images/americano.jpg" class="card-img-top" alt="Classic Americano coffee">
+          <div class="card-body d-flex flex-column">
+            <h3 class="card-title h5">Americano</h3>
+            <p class="card-text flex-grow-1">Espresso, hot water</p>
+            <p class="price mb-0">$2.50</p>
+          </div>
         </div>
-        <div class="card">
-          <img src="images/oatmeal.jpg" alt="Oatmeal porridge with fresh berries">
-          <h3>Berry Oatmeal</h3>
-          <p class="ingredients">Creamy oats, mixed berries, honey, roasted almonds</p>
-          <p class="price">$4.60</p>
+      </div>
+      <!-- 6 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 bloom-bootstrap-card">
+          <img src="images/raf.jpg" class="card-img-top" alt="Classic raf coffee">
+          <div class="card-body d-flex flex-column">
+            <h3 class="card-title h5">Raf Coffee</h3>
+            <p class="card-text flex-grow-1">Espresso, heavy cream, vanilla sugar</p>
+            <p class="price mb-0">$3.90</p>
+          </div>
         </div>
-        <div class="card">
-          <img src="images/shakshuka.jpg" alt="Shakshuka with poached eggs and tomatoes">
-          <h3>Shakshuka</h3>
-          <p class="ingredients">Eggs poached in spiced tomato sauce, bell peppers, herbs</p>
-          <p class="price">$4.80</p>
+      </div>
+      <!-- 7 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 bloom-bootstrap-card">
+          <img src="images/rosebudtea.jpg" class="card-img-top" alt="Hibiscus tea with rose petals">
+          <div class="card-body d-flex flex-column">
+            <h3 class="card-title h5">Rosebud Tea</h3>
+            <p class="card-text flex-grow-1">Hibiscus, rose petals, honey</p>
+            <p class="price mb-0">$2.70</p>
+          </div>
         </div>
-        <div class="card">
-          <img src="images/pancakes.jpg" alt="Stack of fluffy pancakes with maple syrup">
-          <h3>Fluffy Pancakes</h3>
-          <p class="ingredients">American pancakes, maple syrup, fresh blueberries</p>
-          <p class="price">$4.40</p>
+      </div>
+      <!-- 8 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 bloom-bootstrap-card">
+          <img src="images/matchalatte.jpg" class="card-img-top" alt="Matcha latte">
+          <div class="card-body d-flex flex-column">
+            <h3 class="card-title h5">Matcha Latte</h3>
+            <p class="card-text flex-grow-1">Matcha powder, steamed milk, foam</p>
+            <p class="price mb-0">$3.50</p>
+          </div>
         </div>
-        <div class="card">
-          <img src="images/omelette.jpg" alt="Fluffy omelette with spinach and cheese">
-          <h3>Spinach &amp; Cheese Omelette</h3>
-          <p class="ingredients">Three-egg omelette, fresh spinach, feta cheese, cherry tomatoes</p>
-          <p class="price">$4.30</p>
+      </div>
+      <!-- 9 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 bloom-bootstrap-card">
+          <img src="images/icedmangomatcha.jpg" class="card-img-top" alt="Iced mango matcha latte">
+          <div class="card-body d-flex flex-column">
+            <h3 class="card-title h5">Iced Mango Matcha</h3>
+            <p class="card-text flex-grow-1">Matcha powder, milk, mango puree, ice</p>
+            <p class="price mb-0">$4.20</p>
+          </div>
+        </div>
+      </div>
+      <!-- 10 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 bloom-bootstrap-card">
+          <img src="images/frappuccino.jpg" class="card-img-top" alt="Frappuccino">
+          <div class="card-body d-flex flex-column">
+            <h3 class="card-title h5">Frappuccino</h3>
+            <p class="card-text flex-grow-1">Blended espresso, milk, ice, whipped cream</p>
+            <p class="price mb-0">$4.50</p>
+          </div>
+        </div>
+      </div>
+      <!-- 11 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 bloom-bootstrap-card">
+          <img src="images/mojitolemonade.jpg" class="card-img-top" alt="Mojito lemonade">
+          <div class="card-body d-flex flex-column">
+            <h3 class="card-title h5">Mojito Lemonade</h3>
+            <p class="card-text flex-grow-1">Lime, fresh mint, soda water, sugar syrup</p>
+            <p class="price mb-0">$3.60</p>
+          </div>
+        </div>
+      </div>
+      <!-- 12 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 bloom-bootstrap-card">
+          <img src="images/water.jpg" class="card-img-top" alt="Bottle of pure water">
+          <div class="card-body d-flex flex-column">
+            <h3 class="card-title h5">Water</h3>
+            <p class="card-text flex-grow-1">Still or sparkling mineral water</p>
+            <p class="price mb-0">$0.75</p>
+          </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="section--tight" style="background: var(--sage);">
-    <div class="container">
-      <h2>Menu of the day</h2>
-      <table>
+<!-- =====================================================
+     DESSERTS
+     ===================================================== -->
+<section class="section">
+  <div class="container">
+    <div class="section-heading">
+      <h2>Desserts</h2>
+      <p>Fresh pastries and handmade sweets.</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- 1 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 bloom-bootstrap-card">
+          <img src="images/napoleon.jpg" class="card-img-top" alt="Classic Napoleon cake">
+          <div class="card-body d-flex flex-column">
+            <h3 class="card-title h5">Napoleon</h3>
+            <p class="card-text flex-grow-1">Crispy puff pastry, delicate vanilla custard cream</p>
+            <p class="price mb-0">$4.20</p>
+          </div>
+        </div>
+      </div>
+      <!-- 2 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 bloom-bootstrap-card">
+          <img src="images/newyork.jpg" class="card-img-top" alt="New York cheesecake">
+          <div class="card-body d-flex flex-column">
+            <h3 class="card-title h5">New York Cheesecake</h3>
+            <p class="card-text flex-grow-1">Cream cheese, buttery biscuit base, vanilla</p>
+            <p class="price mb-0">$4.50</p>
+          </div>
+        </div>
+      </div>
+      <!-- 3 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 bloom-bootstrap-card">
+          <img src="images/classic.jpg" class="card-img-top" alt="Classic honey cake">
+          <div class="card-body d-flex flex-column">
+            <h3 class="card-title h5">Classic Medovik</h3>
+            <p class="card-text flex-grow-1">Honey sponge layers, smooth sour cream frosting</p>
+            <p class="price mb-0">$4.30</p>
+          </div>
+        </div>
+      </div>
+      <!-- 4 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 bloom-bootstrap-card">
+          <img src="images/cinnabon.jpg" class="card-img-top" alt="Cinnamon roll with cream cheese frosting">
+          <div class="card-body d-flex flex-column">
+            <h3 class="card-title h5">Cinnamon Cinnabon</h3>
+            <p class="card-text flex-grow-1">Soft cinnamon roll, brown sugar, creamy frosting</p>
+            <p class="price mb-0">$3.80</p>
+          </div>
+        </div>
+      </div>
+      <!-- 5 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 bloom-bootstrap-card">
+          <img src="images/eclair.jpg" class="card-img-top" alt="Classic eclair with cream filling">
+          <div class="card-body d-flex flex-column">
+            <h3 class="card-title h5">Eclair</h3>
+            <p class="card-text flex-grow-1">Choux pastry, delicate vanilla cream, chocolate glaze</p>
+            <p class="price mb-0">$3.50</p>
+          </div>
+        </div>
+      </div>
+      <!-- 6 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 bloom-bootstrap-card">
+          <img src="images/tiramisu.jpg" class="card-img-top" alt="Classic tiramisu">
+          <div class="card-body d-flex flex-column">
+            <h3 class="card-title h5">Tiramisu</h3>
+            <p class="card-text flex-grow-1">Mascarpone cream, coffee-soaked ladyfingers, cocoa</p>
+            <p class="price mb-0">$4.70</p>
+          </div>
+        </div>
+      </div>
+      <!-- 7 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 bloom-bootstrap-card">
+          <img src="images/macarons.jpg" class="card-img-top" alt="Colorful French macarons">
+          <div class="card-body d-flex flex-column">
+            <h3 class="card-title h5">Macarons</h3>
+            <p class="card-text flex-grow-1">Almond meringue shells, smooth assorted fillings</p>
+            <p class="price mb-0">$3.90</p>
+          </div>
+        </div>
+      </div>
+      <!-- 8 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 bloom-bootstrap-card">
+          <img src="images/chia.jpg" class="card-img-top" alt="Chia pudding with mango">
+          <div class="card-body d-flex flex-column">
+            <h3 class="card-title h5">Chia Pudding with Mango</h3>
+            <p class="card-text flex-grow-1">Chia seeds, coconut milk, fresh mango</p>
+            <p class="price mb-0">$4.00</p>
+          </div>
+        </div>
+      </div>
+      <!-- 9 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 bloom-bootstrap-card">
+          <img src="images/rawcheesecake.jpg" class="card-img-top" alt="Raw raspberry cheesecake">
+          <div class="card-body d-flex flex-column">
+            <h3 class="card-title h5">Raw Raspberry Cheesecake</h3>
+            <p class="card-text flex-grow-1">Cashew cream, raspberry, almond-date crust</p>
+            <p class="price mb-0">$4.60</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     BREAKFASTS
+     ===================================================== -->
+<section class="section">
+  <div class="container">
+    <div class="section-heading">
+      <h2>Breakfasts</h2>
+      <p>Slow mornings at The Bloom.</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- 1 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 bloom-bootstrap-card">
+          <img src="images/break1.jpg" class="card-img-top" alt="Bloom Breakfast plate">
+          <div class="card-body d-flex flex-column">
+            <h3 class="card-title h5">Bloom Breakfast</h3>
+            <p class="card-text flex-grow-1">Poached egg, fresh avocado, toasted sourdough bread</p>
+            <p class="price mb-0">$6.00</p>
+          </div>
+        </div>
+      </div>
+      <!-- 2 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 bloom-bootstrap-card">
+          <img src="images/chicken-sandwich.jpg" class="card-img-top" alt="Chicken Sandwich on ciabatta">
+          <div class="card-body d-flex flex-column">
+            <h3 class="card-title h5">Chicken Sandwich</h3>
+            <p class="card-text flex-grow-1">Grilled chicken breast, crispy ciabatta, signature sauce</p>
+            <p class="price mb-0">$5.20</p>
+          </div>
+        </div>
+      </div>
+      <!-- 3 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 bloom-bootstrap-card">
+          <img src="images/syrniki.jpg" class="card-img-top" alt="Cottage cheese pancakes with sour cream">
+          <div class="card-body d-flex flex-column">
+            <h3 class="card-title h5">Classic Syrniki</h3>
+            <p class="card-text flex-grow-1">Cottage cheese pancakes, sour cream, berry jam</p>
+            <p class="price mb-0">$4.20</p>
+          </div>
+        </div>
+      </div>
+      <!-- 4 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 bloom-bootstrap-card">
+          <img src="images/english-breakfast.jpg" class="card-img-top" alt="Full English breakfast plate">
+          <div class="card-body d-flex flex-column">
+            <h3 class="card-title h5">Full English Breakfast</h3>
+            <p class="card-text flex-grow-1">Fried eggs, sausages, beans, mushrooms, toasted bread</p>
+            <p class="price mb-0">$5.80</p>
+          </div>
+        </div>
+      </div>
+      <!-- 5 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 bloom-bootstrap-card">
+          <img src="images/oatmeal.jpg" class="card-img-top" alt="Oatmeal porridge with fresh berries">
+          <div class="card-body d-flex flex-column">
+            <h3 class="card-title h5">Berry Oatmeal</h3>
+            <p class="card-text flex-grow-1">Creamy oats, mixed berries, honey, roasted almonds</p>
+            <p class="price mb-0">$4.60</p>
+          </div>
+        </div>
+      </div>
+      <!-- 6 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 bloom-bootstrap-card">
+          <img src="images/shakshuka.jpg" class="card-img-top" alt="Shakshuka with poached eggs and tomatoes">
+          <div class="card-body d-flex flex-column">
+            <h3 class="card-title h5">Shakshuka</h3>
+            <p class="card-text flex-grow-1">Eggs poached in spiced tomato sauce, bell peppers, herbs</p>
+            <p class="price mb-0">$4.80</p>
+          </div>
+        </div>
+      </div>
+      <!-- 7 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 bloom-bootstrap-card">
+          <img src="images/pancakes.jpg" class="card-img-top" alt="Stack of fluffy pancakes with maple syrup">
+          <div class="card-body d-flex flex-column">
+            <h3 class="card-title h5">Fluffy Pancakes</h3>
+            <p class="card-text flex-grow-1">American pancakes, maple syrup, fresh blueberries</p>
+            <p class="price mb-0">$4.40</p>
+          </div>
+        </div>
+      </div>
+      <!-- 8 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 bloom-bootstrap-card">
+          <img src="images/omelette.jpg" class="card-img-top" alt="Fluffy omelette with spinach and cheese">
+          <div class="card-body d-flex flex-column">
+            <h3 class="card-title h5">Spinach &amp; Cheese Omelette</h3>
+            <p class="card-text flex-grow-1">Three-egg omelette, fresh spinach, feta cheese, cherry tomatoes</p>
+            <p class="price mb-0">$4.30</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     MENU OF THE DAY (TABLE)
+     ===================================================== -->
+<section class="section--tight" style="background: var(--sage);">
+  <div class="container">
+    <h2 class="mb-4 text-center">Menu of the day</h2>
+    <div class="table-responsive">
+      <table class="table table-striped table-bordered align-middle mb-0">
         <thead>
           <tr>
             <th>Dish</th>
@@ -260,32 +482,49 @@
         </tbody>
       </table>
     </div>
-  </section>
+  </div>
+</section>
 
-  <footer id="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <h3>The Bloom</h3>
-        <p>A cafe where every drink is a small bouquet.</p>
-      </div>
-      <div>
-        <h3>Navigation</h3>
-        <ul style="list-style:none; padding:0;">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="menu.html">Menu</a></li>
-          <li><a href="reserve.html">Reserve</a></li>
-        </ul>
-      </div>
-      <div>
-        <h3>Project team</h3>
-        <p>Darina Akhmetova — group SE-2515<br>Zhanetta Marat — group SE-2515</p>
-      </div>
+<!-- =====================================================
+     FOOTER (приведено к стилю index.html)
+     ===================================================== -->
+<footer id="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <h3>The Bloom</h3>
+      <p>A cafe where every drink is a small bouquet.</p>
     </div>
-    <div class="container footer-credit">
-      &copy; 2026 The Bloom Cafe. Student project — Assignment #1, Astana IT University.
+    <div>
+      <h3>Navigation</h3>
+      <ul class="list-unstyled">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="reserve.html">Reserve</a></li>
+      </ul>
     </div>
-  </footer>
+    <div>
+      <h3>Project team</h3>
+      <p>
+        Darina Akhmetova — group SE-2515
+        <br>
+        Zhanetta Marat — group SE-2515
+      </p>
+    </div>
+  </div>
+
+  <div class="container footer-credit">
+    &copy; 2026 The Bloom Cafe.
+    Student project —
+    Assignment #3,
+    Astana IT University.
+  </div>
+</footer>
+
+<!-- Bootstrap JavaScript -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
 
 </body>
 </html>

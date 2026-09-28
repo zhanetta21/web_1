@@ -1,150 +1,348 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Assignment #1: HTML & CSS Basics — Team "The Bloom" -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reserve — The Bloom</title>
-  <link rel="stylesheet" href="css/a.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserve | The Bloom</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Your CSS -->
+    <link rel="stylesheet" href="css/a.css">
 </head>
+
 <body>
 
-  <header id="main-header">
-    <div class="container top-bar">
-      <a href="index.html" class="brand">
-        <img src="images/logo.svg" alt="The Bloom cafe logo — a flower mark">
-        <span>The Bloom</span>
-      </a>
-      <nav>
-        <ul class="nav-menu">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="menu.html">Menu</a></li>
-          <li><a href="reserve.html" class="active">Reserve</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <div class="divider-banner">
-    <img src="images/home2.jpg" alt="Elegant table setting with flowers and candles">
-  </div>
-
-  <section class="section">
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg bg-white shadow-sm border-bottom">
     <div class="container">
-      <div class="section-heading">
-        <h1>Reserve a Table</h1>
-        <p>Choose the format for your visit and send a request — we will reach out to confirm.</p>
-      </div>
 
-      <h2>Reservation options</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Format</th>
-            <th>Capacity</th>
-            <th>Deposit</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Table in the main hall</td>
-            <td>up to 4 guests</td>
-            <td>No deposit</td>
-          </tr>
-          <tr>
-            <td>Terrace table</td>
-            <td>up to 6 guests</td>
-            <td>$7</td>
-          </tr>
-          <tr>
-            <td>VIP room "Greenhouse"</td>
-            <td>up to 10 guests</td>
-            <td>$22</td>
-          </tr>
-        </tbody>
-      </table>
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <img src="images/logo.svg" alt="The Bloom logo" width="45" height="45" class="me-2">
+            <span class="fw-bold">The Bloom</span>
+        </a>
 
-      <div class="room-highlight" style="margin: 2rem 0;">
-        <h3>VIP Room "Greenhouse"</h3>
-        <p>A private space surrounded by live plants — perfect for birthdays and business meetings.</p>
-      </div>
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar"
+            aria-controls="mainNavbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link active fw-semibold" aria-current="page" href="reserve.html">Reserve</a></li>
+            </ul>
+        </div>
     </div>
-  </section>
+</nav>
 
-  <section class="section--tight" style="background: var(--sage);">
+
+<!-- ================= BANNER ================= -->
+<section class="container-fluid p-0">
+    <img
+        src="images/home2.jpg"
+        alt="Cozy interior of The Bloom cafe"
+        class="img-fluid w-100"
+        style="max-height: 400px; object-fit: cover;"
+    >
+</section>
+
+
+<!-- ================= INTRO ================= -->
+<section class="container py-5">
+
+    <div class="text-center mb-5">
+        <p class="text-uppercase fw-bold text-success small mb-2">Book Your Place</p>
+        <h1 class="display-5 fw-bold">Reserve a Table</h1>
+        <p class="lead text-muted">
+            Choose a comfortable space and reserve your place at The Bloom.
+        </p>
+    </div>
+
+
+    <!-- ================= RESERVATION OPTIONS ================= -->
+    <div class="row g-4 align-items-center mb-5">
+
+        <div class="col-12 col-lg-6">
+            <h2 class="mb-3 fw-bold">Our Reservation Options</h2>
+            <p class="text-muted">
+                Whether you are meeting friends, working quietly or celebrating
+                a special moment, we have a comfortable table for you.
+            </p>
+            <p class="text-muted">
+                Please choose your preferred table format and complete the
+                reservation form below.
+            </p>
+
+            <div class="btn-group mt-3" role="group" aria-label="Reservation actions">
+                <a href="#reservation-form" class="btn btn-dark px-4 py-2">
+                    Book a Table
+                </a>
+                <a href="menu.html" class="btn btn-outline-dark px-4 py-2">
+                    View Menu
+                </a>
+            </div>
+        </div>
+
+
+        <div class="col-12 col-lg-6">
+            <div class="table-responsive shadow-sm rounded">
+                <table class="table table-bordered table-hover align-middle mb-0 bg-white">
+                    <caption class="caption-top fw-semibold text-dark pb-2">
+                        Available table formats
+                    </caption>
+                    <thead class="table-light">
+                        <tr>
+                            <th scope="col">Table</th>
+                            <th scope="col">Guests</th>
+                            <th scope="col">Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Classic</td>
+                            <td>1–2</td>
+                            <td>Free</td>
+                        </tr>
+                        <tr>
+                            <td>Comfort</td>
+                            <td>2–4</td>
+                            <td>Free</td>
+                        </tr>
+                        <tr>
+                            <td>Group</td>
+                            <td>4–6</td>
+                            <td>Free</td>
+                        </tr>
+                        <tr>
+                            <td>VIP</td>
+                            <td>6–8</td>
+                            <td>Special request</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- ================= RESERVATION FORM ================= -->
+    <div
+        id="reservation-form"
+        class="rounded p-4 p-md-5 shadow-sm border"
+        style="background-color: #fcf9f5;"
+    >
+
+        <div class="mb-4">
+            <h2 class="fw-bold">Reservation Form</h2>
+            <p class="text-muted mb-0">
+                Fill in the information below and we will contact you to
+                confirm your reservation.
+            </p>
+        </div>
+
+
+        <form action="#" method="post">
+
+            <!-- NAME + EMAIL -->
+            <div class="row g-4 mb-4">
+                <div class="col-12 col-md-6">
+                    <label for="guest-name" class="form-label fw-semibold">Full Name</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="guest-name"
+                        name="guest-name"
+                        placeholder="Enter your name"
+                        required
+                    >
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <label for="guest-email" class="form-label fw-semibold">Email Address</label>
+                    <div class="input-group">
+                        <span class="input-group-text bg-white">@</span>
+                        <input
+                            type="email"
+                            class="form-control"
+                            id="guest-email"
+                            name="guest-email"
+                            placeholder="example@email.com"
+                            required
+                        >
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- DATE + GUESTS -->
+            <div class="row g-4 mb-4">
+                <div class="col-12 col-md-6">
+                    <label for="guest-date" class="form-label fw-semibold">Reservation Date</label>
+                    <input
+                        type="date"
+                        class="form-control"
+                        id="guest-date"
+                        name="guest-date"
+                        required
+                    >
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <label for="guest-count" class="form-label fw-semibold">Number of Guests</label>
+                    <select
+                        class="form-select"
+                        id="guest-count"
+                        name="guest-count"
+                        required
+                    >
+                        <option value="" selected disabled>Select number of guests</option>
+                        <option value="1">1 guest</option>
+                        <option value="2">2 guests</option>
+                        <option value="3">3 guests</option>
+                        <option value="4">4 guests</option>
+                        <option value="5">5 guests</option>
+                        <option value="6">6 guests</option>
+                        <option value="7">7 guests</option>
+                        <option value="8">8 guests</option>
+                    </select>
+                </div>
+            </div>
+
+
+            <!-- TABLE TYPE -->
+            <div class="row g-4 mb-4">
+                <div class="col-12 col-md-6">
+                    <label for="room-type" class="form-label fw-semibold">Table Type</label>
+                    <select
+                        class="form-select"
+                        id="room-type"
+                        name="room-type"
+                        required
+                    >
+                        <option value="" selected disabled>Choose a table</option>
+                        <option value="classic">Classic</option>
+                        <option value="comfort">Comfort</option>
+                        <option value="group">Group</option>
+                        <option value="vip">VIP</option>
+                    </select>
+                </div>
+
+                <!-- RADIO BUTTONS -->
+                <div class="col-12 col-md-6">
+                    <fieldset>
+                        <legend class="fs-6 fw-semibold mb-2">
+                            Preferred Table Accent
+                        </legend>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="table-color" id="color-light" value="light" checked>
+                            <label class="form-check-label" for="color-light">Light</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="table-color" id="color-green" value="green">
+                            <label class="form-check-label" for="color-green">Green</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="table-color" id="color-pink" value="pink">
+                            <label class="form-check-label" for="color-pink">Pink</label>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+
+
+            <!-- PHONE -->
+            <div class="mb-4">
+                <label for="guest-phone" class="form-label fw-semibold">Phone Number</label>
+                <div class="input-group">
+                    <span class="input-group-text bg-white">+7</span>
+                    <input
+                        type="tel"
+                        class="form-control"
+                        id="guest-phone"
+                        name="guest-phone"
+                        placeholder="700 000 00 00"
+                    >
+                </div>
+            </div>
+
+
+            <!-- MESSAGE -->
+            <div class="mb-4">
+                <label for="guest-message" class="form-label fw-semibold">Additional Message</label>
+                <textarea
+                    class="form-control"
+                    id="guest-message"
+                    name="guest-message"
+                    rows="4"
+                    placeholder="Tell us about any special requests..."
+                ></textarea>
+            </div>
+
+
+            <!-- CHECKBOX -->
+            <div class="form-check mb-4">
+                <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="confirmation"
+                    name="confirmation"
+                    required
+                >
+                <label class="form-check-label text-muted" for="confirmation">
+                    I confirm that the information provided is correct.
+                </label>
+            </div>
+
+
+            <!-- BUTTONS -->
+            <div class="d-flex flex-column flex-sm-row gap-3">
+                <button type="submit" class="btn btn-dark px-4 py-2">
+                    Reserve a Table
+                </button>
+                <button type="reset" class="btn btn-outline-secondary px-4 py-2">
+                    Clear Form
+                </button>
+            </div>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-dark text-white text-center py-4 mt-5">
     <div class="container">
-      <h2>Reservation form</h2>
-      <form id="contact-form" action="#" method="post">
-
-        <div class="form-row">
-          <label for="guest-name">Name</label>
-          <input type="text" id="guest-name" name="guest-name" placeholder="How should we address you" required>
-        </div>
-
-        <div class="form-row">
-          <label for="guest-email">Email</label>
-          <input type="email" id="guest-email" name="guest-email" placeholder="you@example.com" required>
-        </div>
-
-        <div class="form-row">
-          <label for="guest-date">Visit date</label>
-          <input type="date" id="guest-date" name="guest-date">
-        </div>
-
-        <div class="form-row">
-          <label for="room-type">Table format</label>
-          <select id="room-type" name="room-type">
-            <option value="hall">Main hall</option>
-            <option value="terrace">Terrace</option>
-            <option value="vip">VIP room "Greenhouse"</option>
-          </select>
-        </div>
-
-        <div class="form-row">
-          <span>Preferred table accent color</span>
-          <div class="color-options">
-            <label><input type="radio" name="table-color" value="blush" checked> Blush pink</label>
-            <label><input type="radio" name="table-color" value="gold"> Gold</label>
-            <label><input type="radio" name="table-color" value="sage"> Sage green</label>
-          </div>
-        </div>
-
-        <div class="form-row">
-          <label for="guest-message">Message</label>
-          <textarea id="guest-message" name="guest-message" rows="4" placeholder="Special requests: allergies, occasion, etc."></textarea>
-        </div>
-
-        <button type="submit" class="btn">Send request</button>
-      </form>
+        <p class="mb-1 fw-semibold">
+            The Bloom — Cafe & Cozy Space
+        </p>
+        <p class="mb-0 text-white-50 small">
+            Team: Darina Akhmetova & Zhanetta Marat | SE-2515
+        </p>
     </div>
-  </section>
+</footer>
 
-  <footer id="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <h3>The Bloom</h3>
-        <p>A cafe where every drink is a small bouquet.</p>
-      </div>
-      <div>
-        <h3>Navigation</h3>
-        <ul style="list-style:none; padding:0;">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="menu.html">Menu</a></li>
-          <li><a href="reserve.html">Reserve</a></li>
-        </ul>
-      </div>
-      <div>
-        <h3>Project team</h3>
-        <p>Darina Akhmetova — group SE-2515<br>Zhanetta Marat — group SE-2515</p>
-      </div>
-    </div>
-    <div class="container footer-credit">
-      &copy; 2026 The Bloom Cafe. Student project — Assignment #1, Astana IT University.
-    </div>
-  </footer>
+
+<!-- Bootstrap JS -->
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
 
 </body>
 </html>

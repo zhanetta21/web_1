@@ -1,168 +1,358 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Assignment #1: HTML & CSS Basics — Team "The Bloom" -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About — The Bloom</title>
+
+  <!-- Bootstrap 5 -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+  <!-- Your CSS -->
   <link rel="stylesheet" href="css/a.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
+
 <body>
 
-  <header id="main-header">
-    <div class="container top-bar">
-      <a href="index.html" class="brand">
-        <img src="images/logo.svg" alt="The Bloom cafe logo — a flower mark">
-        <span>The Bloom</span>
-      </a>
-      <nav>
-        <ul class="nav-menu">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html" class="active">About</a></li>
-          <li><a href="menu.html">Menu</a></li>
-          <li><a href="reserve.html">Reserve</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg bg-white shadow-sm border-bottom">
+  <div class="container">
 
-  <div class="divider-banner">
-    <img src="images/v5.jpg" alt="Cozy cafe interior with plants and a garden view">
-  </div>
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img
+        src="images/logo.svg"
+        alt="The Bloom cafe logo"
+        width="45"
+        height="45"
+        class="me-2"
+      >
+      <span class="fw-bold">The Bloom</span>
+    </a>
 
-  <!-- PAGE LAYOUT WITH GRID AREAS (Task 3) -->
-  <div class="grid-page-container">
-    <aside class="grid-sidebar">
-      <h3>Quick Navigation</h3>
-      <ul>
-        <li><a href="#story">Our Story</a></li>
-        <li><a href="#team">The Team</a></li>
-        <li><a href="#gallery">Atmosphere</a></li>
-      </ul>
-    </aside>
-    
-    <main class="grid-main">
-      <h2>Detailed Overview</h2>
-      <p>Here you can place the main articles and additional info about the cafe project development.</p>
-    </main>
-  </div>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#mainNavbar"
+      aria-controls="mainNavbar"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-  <section class="section" id="story">
-    <div class="container">
-      <div class="section-heading">
-        <h1>About Us</h1>
-        <p>The story of a small idea that grew into a cafe.</p>
-      </div>
-
-      <h2>How we started</h2>
-      <p>The Bloom began with a simple observation: morning coffee rarely brings real joy. We decided to change that by pairing quality bean roasting with the aesthetic of a flower workshop. Here is how our journey unfolded:</p>
-      <ol>
-        <li>The idea and first drink tastings at home</li>
-        <li>Developing the menu and finding a local bean supplier</li>
-        <li>Renovating and designing the first room in a botanical style</li>
-        <li>Opening The Bloom on Abay Street</li>
-        <li>Launching table and VIP room reservations for guests</li>
-      </ol>
-    </div>
-  </section>
-
-  <section class="section--tight" style="background: var(--sage);" id="team">
-    <div class="container">
-      <h2>About the team members</h2>
-
-      <div class="team-member">
-        <img src="images/da.jpg" alt="Portrait of Darina Akhmetova" class="profile-img">
-        <div>
-          <h3>Darina Akhmetova</h3>
-          <p>Responsible for building the Home and Menu pages, developing the color palette, and making the site responsive. Enjoys experimenting with typography and keeping plants on the windowsill.</p>
-        </div>
-      </div>
-
-      <div class="team-member">
-        <img src="images/zm.jpg" alt="Portrait of Zhanetta Marat" class="profile-img">
-        <div>
-          <h3>Zhanetta Marat</h3>
-          <p>Responsible for building the About and Reserve pages, developing the reservation form, and sourcing photos. Passionate about coffee culture and food photography.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PHOTO GALLERY (Task 4) -->
-  <section class="section" id="gallery">
-    <div class="container">
-      <div class="section-heading">
-        <h2>Atmosphere Gallery</h2>
-        <p>Moments and corners of The Bloom cafe.</p>
-      </div>
-      
-      <div class="image-gallery">
-        <div class="gallery-item">
-          <img src="images/mainhall.jpg" alt="Main hall interior with comfortable seats">
-          <div class="gallery-caption">Main Hall</div>
-        </div>
-        <div class="gallery-item">
-          <img src="images/hall2.jpg" alt="Aesthetic dining table setup">
-          <div class="gallery-caption">Table Setting</div>
-        </div>
-        <div class="gallery-item">
-          <img src="images/hall3.jpg" alt="Ceiling decorated with blooming flowers">
-          <div class="gallery-caption">Floral Ceiling</div>
-        </div>
-        <div class="gallery-item">
-          <img src="images/hall4.jpg" alt="Warm evening illumination in the cafe">
-          <div class="gallery-caption">Evening Vibe</div>
-        </div>
-        <div class="gallery-item">
-          <img src="images/bath.jpg" alt="Aesthetic pink bathroom with floral accents">
-          <div class="gallery-caption">Pink Restroom</div>
-        </div>
-        <div class="gallery-item">
-          <img src="images/decor.jpg" alt="Interior decor with cafe logo details">
-          <div class="gallery-caption">Logo & Details</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <h2>What inspires us</h2>
-      <ul class="tag-list">
-        <li>Local flower growers</li>
-        <li>Scandinavian minimalism</li>
-        <li>Slow breakfasts</li>
-        <li>Sustainable packaging</li>
-        <li>Neighborhood traditions</li>
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active fw-semibold" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+        <li class="nav-item"><a class="nav-link" href="reserve.html">Reserve</a></li>
       </ul>
     </div>
-  </section>
 
-  <footer id="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <h3>The Bloom</h3>
-        <p>A cafe where every drink is a small bouquet.</p>
+  </div>
+</nav>
+
+
+<!-- ================= BANNER ================= -->
+<section class="py-4">
+  <div class="container">
+    <img
+      src="images/v5.jpg"
+      alt="Cozy interior of The Bloom cafe"
+      class="img-fluid rounded shadow-sm w-100"
+      style="max-height: 420px; object-fit: cover;"
+    >
+  </div>
+</section>
+
+
+<!-- ================= ABOUT INTRODUCTION ================= -->
+<section class="py-5">
+  <div class="container">
+    <div class="row align-items-center g-5">
+
+      <div class="col-12 col-lg-6">
+        <p class="text-uppercase fw-bold text-success small mb-2">
+          About The Bloom
+        </p>
+        <h1 class="display-5 fw-bold mb-4">
+          A small idea that grew into a cafe
+        </h1>
+        <p class="lead text-muted">
+          The Bloom began with a simple observation:
+          morning coffee rarely brings real joy.
+        </p>
+        <p class="text-muted">
+          We decided to change that by pairing quality bean
+          roasting with the aesthetic of a flower workshop.
+          Our cafe combines specialty coffee, handmade
+          desserts and a warm botanical atmosphere.
+        </p>
       </div>
-      <div>
-        <h3>Navigation</h3>
-        <ul style="list-style:none; padding:0;">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="menu.html">Menu</a></li>
-          <li><a href="reserve.html">Reserve</a></li>
+
+      <div class="col-12 col-lg-6">
+        <div class="p-4 rounded shadow-sm border" style="background-color: #fcf9f5;">
+          <h2 class="mb-4 fw-bold">Our Story</h2>
+          <ol class="mb-0 text-muted">
+            <li class="mb-2">The idea and first drink tastings at home</li>
+            <li class="mb-2">Developing the menu and finding a local bean supplier</li>
+            <li class="mb-2">Renovating and designing the first room in a botanical style</li>
+            <li class="mb-2">Opening The Bloom</li>
+            <li>Launching table and VIP room reservations</li>
+          </ol>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ================= CAROUSEL ================= -->
+<section class="py-5 bg-light">
+  <div class="container">
+
+    <div class="text-center mb-5">
+      <p class="text-uppercase fw-bold text-success small mb-2">Our Atmosphere</p>
+      <h2 class="display-6 fw-bold">The Bloom Gallery</h2>
+      <p class="text-muted">Explore the spaces and details that make our cafe special.</p>
+    </div>
+
+    <div
+      id="bloomCarousel"
+      class="carousel slide shadow-lg rounded overflow-hidden"
+      data-bs-ride="carousel"
+    >
+
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#bloomCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#bloomCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#bloomCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#bloomCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#bloomCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        <button type="button" data-bs-target="#bloomCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+        <button type="button" data-bs-target="#bloomCarousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
+        <button type="button" data-bs-target="#bloomCarousel" data-bs-slide-to="7" aria-label="Slide 8"></button>
+        <button type="button" data-bs-target="#bloomCarousel" data-bs-slide-to="8" aria-label="Slide 9"></button>
+      </div>
+
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="images/mainhall.jpg" class="d-block w-100" alt="Main hall interior" style="height: 550px; object-fit: cover;">
+          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+            <h3>Main Hall</h3>
+            <p class="mb-0">Our comfortable main dining space.</p>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="images/hall2.jpg" class="d-block w-100" alt="Table setting" style="height: 550px; object-fit: cover;">
+          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+            <h3>Table Setting</h3>
+            <p class="mb-0">A carefully designed table for our guests.</p>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="images/hall3.jpg" class="d-block w-100" alt="Floral ceiling" style="height: 550px; object-fit: cover;">
+          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+            <h3>Floral Ceiling</h3>
+            <p class="mb-0">Flowers are part of The Bloom identity.</p>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="images/hall4.jpg" class="d-block w-100" alt="Evening vibe" style="height: 550px; object-fit: cover;">
+          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+            <h3>Evening Vibe</h3>
+            <p class="mb-0">Warm lighting creates a relaxing evening atmosphere.</p>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="images/bath.jpg" class="d-block w-100" alt="Pink restroom" style="height: 550px; object-fit: cover;">
+          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+            <h3>Pink Restroom</h3>
+            <p class="mb-0">Even the smallest details follow our floral style.</p>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="images/decor.jpg" class="d-block w-100" alt="Logo & Details" style="height: 550px; object-fit: cover;">
+          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+            <h3>Logo & Details</h3>
+            <p class="mb-0">Small design elements complete the Bloom experience.</p>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="images/home1.jpg" class="d-block w-100" alt="Cozy Corner" style="height: 550px; object-fit: cover;">
+          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+            <h3>Cozy Corner</h3>
+            <p class="mb-0">A comfortable corner for coffee and conversation.</p>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="images/home2.jpg" class="d-block w-100" alt="Table Atmosphere" style="height: 550px; object-fit: cover;">
+          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+            <h3>Table Atmosphere</h3>
+            <p class="mb-0">Flowers and candles make every visit special.</p>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="images/home3.jpg" class="d-block w-100" alt="The Bloom Interior" style="height: 550px; object-fit: cover;">
+          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+            <h3>The Bloom Interior</h3>
+            <p class="mb-0">A bright and welcoming space in the heart of Astana.</p>
+          </div>
+        </div>
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#bloomCarousel" data-bs-slide="prev" aria-label="Previous image">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+
+      <button class="carousel-control-next" type="button" data-bs-target="#bloomCarousel" data-bs-slide="next" aria-label="Next image">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ================= TEAM SECTION ================= -->
+<section class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Our Team</h2>
+      <p class="text-muted">The people behind The Bloom student project.</p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-12 col-md-6">
+        <div class="card h-100 shadow-sm border-0">
+          <img src="images/da.jpg" class="card-img-top" alt="Darina Akhmetova" style="height: 350px; object-fit: cover;">
+          <div class="card-body p-4 bg-light rounded-bottom">
+            <h3 class="card-title fw-bold fs-4">Darina Akhmetova</h3>
+            <p class="card-text text-muted">
+              Responsible for building the Home and Menu pages, developing the color palette, and making the site responsive.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6">
+        <div class="card h-100 shadow-sm border-0">
+          <img src="images/zm.jpg" class="card-img-top" alt="Zhanetta Marat" style="height: 350px; object-fit: cover;">
+          <div class="card-body p-4 bg-light rounded-bottom">
+            <h3 class="card-title fw-bold fs-4">Zhanetta Marat</h3>
+            <p class="card-text text-muted">
+              Responsible for building the About and Reserve pages, developing the reservation form, and sourcing photos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ================= INSPIRATION ================= -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row g-4 align-items-center">
+
+      <div class="col-12 col-lg-6">
+        <h2 class="mb-4 fw-bold">What Inspires Us</h2>
+        <p class="text-muted">
+          The Bloom combines cafe culture with botanical aesthetics and simple Scandinavian-inspired design.
+        </p>
+      </div>
+
+      <div class="col-12 col-lg-6">
+        <div class="row g-2">
+          <div class="col-6"><div class="p-3 bg-white rounded shadow-sm text-center fw-medium">Local flower growers</div></div>
+          <div class="col-6"><div class="p-3 bg-white rounded shadow-sm text-center fw-medium">Scandinavian minimalism</div></div>
+          <div class="col-6"><div class="p-3 bg-white rounded shadow-sm text-center fw-medium">Slow breakfasts</div></div>
+          <div class="col-6"><div class="p-3 bg-white rounded shadow-sm text-center fw-medium">Sustainable packaging</div></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ================= CALL TO ACTION ================= -->
+<section class="py-5">
+  <div class="container text-center">
+    <h2 class="mb-3 fw-bold">Want to visit The Bloom?</h2>
+    <p class="mb-4 text-muted">Choose your table and enjoy coffee surrounded by flowers.</p>
+    <div class="btn-group" role="group" aria-label="About page actions">
+      <a href="menu.html" class="btn btn-outline-dark px-4 py-2">View Menu</a>
+      <a href="reserve.html" class="btn btn-dark px-4 py-2">Reserve a Table</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-dark text-white py-5">
+  <div class="container">
+    <div class="row g-4">
+
+      <div class="col-12 col-md-4">
+        <h3 class="fw-bold">The Bloom</h3>
+        <p class="text-white-50">A cafe where every drink is a small bouquet.</p>
+      </div>
+
+      <div class="col-12 col-md-4">
+        <h3 class="fw-bold">Navigation</h3>
+        <ul class="list-unstyled">
+          <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+          <li><a href="about.html" class="text-white text-decoration-none">About</a></li>
+          <li><a href="menu.html" class="text-white text-decoration-none">Menu</a></li>
+          <li><a href="reserve.html" class="text-white text-decoration-none">Reserve</a></li>
         </ul>
       </div>
-      <div>
-        <h3>Project team</h3>
-        <p>Darina Akhmetova — group SE-2515<br>Zhanetta Marat — group SE-2515</p>
+
+      <div class="col-12 col-md-4">
+        <h3 class="fw-bold">Project Team</h3>
+        <p class="text-white-50">
+          Darina Akhmetova — group SE-2515<br>
+          Zhanetta Marat — group SE-2515
+        </p>
       </div>
+
     </div>
-    <div class="container footer-credit">
-      &copy; 2026 The Bloom Cafe. Student project — Assignment #1, Astana IT University.
+
+    <hr class="border-secondary">
+
+    <div class="text-center">
+      <p class="mb-0 text-white-50 small">
+        &copy; 2026 The Bloom Cafe. Student project — Assignment #3, Astana IT University.
+      </p>
     </div>
-  </footer>
+
+  </div>
+</footer>
+
+
+<!-- Bootstrap JavaScript -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
 
 </body>
 </html>
