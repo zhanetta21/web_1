@@ -74,3 +74,17 @@ if (subscribeForm) {
         subscribeForm.reset();
     });
 }
+
+// TASK 4 - BACKGROUND COLOR
+
+const colorButton = document.getElementById("changeColor");
+
+if (colorButton) {
+    const colors = ["#fff8f0", "#f5e9e4", "#e8f3e8", "#e8eef8"];
+    let colorIndex = 0;
+
+    colorButton.addEventListener("click", function() {
+        colorIndex = (colorIndex + 1) % colors.length;
+        document.body.style.backgroundColor = colors[colorIndex];
+    });
+}

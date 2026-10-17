@@ -688,3 +688,77 @@ tr:last-child td {
 .faq-answer p {
     padding: 15px;
 }
+
+/* TASK 3 - POPUP */
+
+.subscription-section {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+#openPopup, .popup-content button[type="submit"] {
+    background: #654b43;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+    text-align: center;
+}
+
+.popup-content input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+#closePopup {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    background: none;
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+/* TASK 4 - BACKGROUND COLOR */
+
+.color-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+#changeColor {
+    background: #654b43;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+body {
+    transition: background-color 0.5s ease;
+}
