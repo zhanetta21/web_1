@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Assignment #1: HTML & CSS Basics — Team "The Bloom" -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reserve — The Bloom</title>
+  <link rel="stylesheet" href="css/a.css">
+</head>
+<body>
+
+  <header id="main-header">
+    <div class="container top-bar">
+      <a href="index.html" class="brand">
+        <img src="images/logo.svg" alt="The Bloom cafe logo — a flower mark">
+        <span>The Bloom</span>
+      </a>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="reserve.html" class="active">Reserve</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="divider-banner">
+    <img src="images/home2.jpg" alt="Elegant table setting with flowers and candles">
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-heading">
+        <h1>Reserve a Table</h1>
+        <p>Choose the format for your visit and send a request — we will reach out to confirm.</p>
+      </div>
+
+      <h2>Reservation options</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Format</th>
+            <th>Capacity</th>
+            <th>Deposit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Table in the main hall</td>
+            <td>up to 4 guests</td>
+            <td>No deposit</td>
+          </tr>
+          <tr>
+            <td>Terrace table</td>
+            <td>up to 6 guests</td>
+            <td>$7</td>
+          </tr>
+          <tr>
+            <td>VIP room "Greenhouse"</td>
+            <td>up to 10 guests</td>
+            <td>$22</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="room-highlight" style="margin: 2rem 0;">
+        <h3>VIP Room "Greenhouse"</h3>
+        <p>A private space surrounded by live plants — perfect for birthdays and business meetings.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section--tight" style="background: var(--sage);">
+    <div class="container">
+      <h2>Reservation form</h2>
+      <form id="contact-form" action="#" method="post">
+
+        <div class="form-row">
+          <label for="guest-name">Name</label>
+          <input type="text" id="guest-name" name="guest-name" placeholder="How should we address you" required>
+        </div>
+
+        <div class="form-row">
+          <label for="guest-email">Email</label>
+          <input type="email" id="guest-email" name="guest-email" placeholder="you@example.com" required>
+        </div>
+
+        <div class="form-row">
+          <label for="guest-date">Visit date</label>
+          <input type="date" id="guest-date" name="guest-date">
+        </div>
+
+        <div class="form-row">
+          <label for="room-type">Table format</label>
+          <select id="room-type" name="room-type">
+            <option value="hall">Main hall</option>
+            <option value="terrace">Terrace</option>
+            <option value="vip">VIP room "Greenhouse"</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <span>Preferred table accent color</span>
+          <div class="color-options">
+            <label><input type="radio" name="table-color" value="blush" checked> Blush pink</label>
+            <label><input type="radio" name="table-color" value="gold"> Gold</label>
+            <label><input type="radio" name="table-color" value="sage"> Sage green</label>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label for="guest-message">Message</label>
+          <textarea id="guest-message" name="guest-message" rows="4" placeholder="Special requests: allergies, occasion, etc."></textarea>
+        </div>
+
+        <button type="submit" class="btn">Send request</button>
+      </form>
+    </div>
+  </section>
+
+  <footer id="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>The Bloom</h3>
+        <p>A cafe where every drink is a small bouquet.</p>
+      </div>
+      <div>
+        <h3>Navigation</h3>
+        <ul style="list-style:none; padding:0;">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="reserve.html">Reserve</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Project team</h3>
+        <p>Darina Akhmetova — group SE-2515<br>Zhanetta Marat — group SE-2515</p>
+      </div>
+    </div>
+    <div class="container footer-credit">
+      &copy; 2026 The Bloom Cafe. Student project — Assignment #1, Astana IT University.
+    </div>
+  </footer>
+
+</body>
+</html>
