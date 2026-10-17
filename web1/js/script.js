@@ -88,3 +88,26 @@ if (colorButton) {
         document.body.style.backgroundColor = colors[colorIndex];
     });
 }
+// TASK 5 - DATE AND TIME
+
+const dateTimeElement = document.getElementById("dateTime");
+
+function updateDateTime() {
+    if (dateTimeElement) {
+        const now = new Date();
+
+        dateTimeElement.textContent = now.toLocaleString("en-US", {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+            hour: "2-digit",
+            minute: "2-digit",
+            second: "2-digit"
+        });
+    }
+}
+
+if (dateTimeElement) {
+    updateDateTime();
+    setInterval(updateDateTime, 1000);
+}

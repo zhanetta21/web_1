@@ -776,3 +776,15 @@ tr:last-child td {
     font-size: 26px;
     cursor: pointer;
 }
+/* TASK 5 - DATE AND TIME */
+
+.datetime-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+#dateTime {
+    font-size: 22px;
+    font-weight: bold;
+    color: #654b43;
+}
