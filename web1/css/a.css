@@ -775,3 +775,46 @@ body {
     font-weight: bold;
     color: #654b43;
 }
+/* TASK 4 - BACKGROUND COLOR */
+
+.color-section {
+    text-align: center;
+    padding: 50px 20px;
+    margin: 30px auto;
+}
+
+.color-section h2 {
+    text-align: center;
+}
+
+.color-section p {
+    text-align: center;
+}
+
+#changeColor {
+    display: inline-block;
+    background-color: #654b43;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#changeColor:hover {
+    background-color: #84665c;
+}
+
+/* TASK 5 - DATE AND TIME */
+
+.datetime-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+#dateTime {
+    font-size: 22px;
+    color: #654b43;
+    font-weight: bold;
+}
