@@ -762,3 +762,16 @@ tr:last-child td {
 body {
     transition: background-color 0.5s ease;
 }
+
+/* TASK 5 - DATE AND TIME */
+
+.datetime-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+#dateTime {
+    font-size: 22px;
+    font-weight: bold;
+    color: #654b43;
+}
