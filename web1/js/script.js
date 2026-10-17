@@ -21,7 +21,7 @@ if (reservationForm) {
             message.textContent = "Name must contain at least 2 characters.";
         } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
             message.textContent = "Please enter a valid email address.";
-        } else if (password.length < 8 {
+        } else if (password.length < 8 ){
             message.textContent = "Password must contain at least 8 characters.";
         } else if (password !== confirmPassword) {
             message.textContent = "Passwords do not match.";
