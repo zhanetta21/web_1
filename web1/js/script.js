@@ -42,3 +42,35 @@ questions.forEach(function(question) {
         answer.classList.toggle("active");
     });
 });
+// TASK 3 - POPUP FORM
+
+const popup = document.getElementById("popup");
+const openPopup = document.getElementById("openPopup");
+const closePopup = document.getElementById("closePopup");
+
+if (popup && openPopup && closePopup) {
+    openPopup.addEventListener("click", function() {
+        popup.style.display = "flex";
+    });
+
+    closePopup.addEventListener("click", function() {
+        popup.style.display = "none";
+    });
+
+    window.addEventListener("click", function(event) {
+        if (event.target === popup) {
+            popup.style.display = "none";
+        }
+    });
+}
+
+const subscribeForm = document.getElementById("subscribeForm");
+
+if (subscribeForm) {
+    subscribeForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+        document.getElementById("subscribeMessage").textContent =
+            "Thank you for subscribing!";
+        subscribeForm.reset();
+    });
+}
