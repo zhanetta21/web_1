@@ -1,5 +1,5 @@
 
-// TASK 1 - FORM VALIDATION
+// TASK 1 - FORM VALIDATIONscript.js
 
 const reservationForm = document.getElementById("reservationForm");
 
