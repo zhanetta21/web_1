@@ -139,6 +139,28 @@
     </div>
   </section>
 
+<section class="subscription-section">
+    <h2>Stay Connected with The Bloom</h2>
+    <p>Subscribe to receive our latest updates!</p>
+
+    <button id="openPopup">Subscribe</button>
+</section>
+
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <button id="closePopup" aria-label="Close">&times;</button>
+
+        <h2>Subscribe</h2>
+
+        <form id="subscribeForm">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <button type="submit">Submit</button>
+        </form>
+        <p id="subscribeMessage" aria-live="polite"></p>
+    </div>
+</div>
+
   <!-- FOOTER -->
   <footer id="site-footer">
     <div class="container footer-grid">

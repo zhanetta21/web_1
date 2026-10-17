@@ -655,3 +655,36 @@ tr:last-child td {
       "main";
   }
 }
+
+/* TASK 2 - ACCORDION */
+
+.faq-section {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 18px;
+    background: #f5e9e4;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    font-size: 17px;
+    margin-top: 10px;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+.faq-answer.active {
+    max-height: 250px;
+}
+
+.faq-answer p {
+    padding: 15px;
+}
