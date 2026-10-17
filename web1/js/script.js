@@ -1,3 +1,4 @@
+alert("JavaScript connected!");
 const reservationForm = document.getElementById("reservationForm");
 
 if (reservationForm) {
