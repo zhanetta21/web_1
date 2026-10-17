@@ -788,3 +788,31 @@ tr:last-child td {
     font-weight: bold;
     color: #654b43;
 }
+
+.color-section {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.color-section h2,
+.color-section p {
+    text-align: center;
+}
+
+#changeColor {
+    background-color: #654b43;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#changeColor:hover {
+    background-color: #84665c;
+}
+
+body {
+    transition: background-color 0.5s ease;
+}

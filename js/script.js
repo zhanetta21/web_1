@@ -1,4 +1,6 @@
-alert("JavaScript connected!");
+
+// TASK 1 - FORM VALIDATION
+
 const reservationForm = document.getElementById("reservationForm");
 
 if (reservationForm) {
@@ -22,7 +24,7 @@ if (reservationForm) {
             message.textContent = "Name must contain at least 2 characters.";
         } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
             message.textContent = "Please enter a valid email address.";
-        } else if (password.length < 8 ){
+        } else if (password.length < 8) {
             message.textContent = "Password must contain at least 8 characters.";
         } else if (password !== confirmPassword) {
             message.textContent = "Passwords do not match.";
@@ -32,6 +34,7 @@ if (reservationForm) {
         }
     });
 }
+
 
 // TASK 2 - ACCORDION
 
@@ -43,6 +46,8 @@ questions.forEach(function(question) {
         answer.classList.toggle("active");
     });
 });
+
+
 // TASK 3 - POPUP FORM
 
 const popup = document.getElementById("popup");
@@ -70,26 +75,31 @@ const subscribeForm = document.getElementById("subscribeForm");
 if (subscribeForm) {
     subscribeForm.addEventListener("submit", function(event) {
         event.preventDefault();
+
         document.getElementById("subscribeMessage").textContent =
             "Thank you for subscribing!";
+
         subscribeForm.reset();
     });
 }
 
-// TASK 4 - BACKGROUND COLOR
+
+// TASK 4 - CHANGE BACKGROUND COLOR
 
 const colorButton = document.getElementById("changeColor");
 
 if (colorButton) {
-    const colors = ["#fff8f0", "#f5e9e4", "#e8f3e8", "#e8eef8"];
+    const colors = ["#f5e9e4", "#e8f3e8", "#e8eef8", "#fff8f0"];
     let colorIndex = 0;
 
     colorButton.addEventListener("click", function() {
-        colorIndex = (colorIndex + 1) % colors.length;
         document.body.style.backgroundColor = colors[colorIndex];
+        colorIndex = (colorIndex + 1) % colors.length;
     });
 }
-// TASK 5 - DATE AND TIME
+
+
+// TASK 5 - CURRENT DATE AND TIME
 
 const dateTimeElement = document.getElementById("dateTime");
 
