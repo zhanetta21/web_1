@@ -156,7 +156,7 @@
         </div>
 
 
-        <form action="#" method="post">
+        <form id="reservationForm" action="#" method="post" novalidate>
 
             <!-- NAME + EMAIL -->
             <div class="row g-4 mb-4">
@@ -293,7 +293,26 @@
                 ></textarea>
             </div>
 
+            <div class="mb-3">
+    <label for="password" class="form-label">Password</label>
+    <input type="password" id="password"
+           class="form-control"
+           placeholder="At least 8 characters" required>
+</div>
 
+<div class="mb-3">
+    <label for="confirmPassword" class="form-label">
+        Confirm Password
+    </label>
+    <input type="password" id="confirmPassword"
+           class="form-control"
+           placeholder="Repeat password" required>
+</div>
+
+<p id="formMessage" aria-live="polite"></p>
+
+
+            
             <!-- CHECKBOX -->
             <div class="form-check mb-4">
                 <input
