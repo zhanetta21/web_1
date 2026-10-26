@@ -13,6 +13,7 @@
 
     <!-- Your CSS -->
     <link rel="stylesheet" href="css/a.css">
+    <link rel="stylesheet" href="css/assignment5.css">
 </head>
 <body>
 
@@ -61,6 +62,34 @@
 
 
 <!-- ================= INTRO ================= -->
+<section class="container assignment-feature" id="visitPlanner">
+  <h2>Plan your visit in two steps</h2>
+  <p id="plannerProgress" aria-live="polite">Step 1 of 2: Choose a visit type</p>
+  <div class="planner-step" data-step="0">
+    <label for="visitType">What brings you to The Bloom?</label>
+    <select id="visitType" class="form-select">
+      <option value="coffee">Coffee break</option>
+      <option value="breakfast">Breakfast</option>
+      <option value="celebration">Celebration</option>
+    </select>
+  </div>
+  <div class="planner-step" data-step="1" hidden>
+    <label for="visitGuests">How many people?</label>
+    <select id="visitGuests" class="form-select">
+      <option value="1">1 guest</option>
+      <option value="2">2 guests</option>
+      <option value="3">3 guests</option>
+      <option value="4">4 guests</option>
+    </select>
+  </div>
+  <div class="filter-buttons mt-3">
+    <button id="plannerBack" type="button" class="feature-button" hidden>Back</button>
+    <button id="plannerNext" type="button" class="feature-button">Next</button>
+  </div>
+  <p id="plannerResult" aria-live="polite"></p>
+  <p class="small text-muted">This is a visit planner; complete the reservation form below to validate your details.</p>
+</section>
+
 <section class="container py-5">
 
     <div class="text-center mb-5">
@@ -361,6 +390,7 @@
 <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
 </script>
-<script src="js/script.js"></script>
+<script src="js/script.js" defer></script>
+<script src="js/assignment5.js" defer></script>
 </body>
 </html>

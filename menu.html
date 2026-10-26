@@ -14,8 +14,8 @@
 
   <!-- Our CSS -->
   <link rel="stylesheet" href="css/a.css">
+  <link rel="stylesheet" href="css/assignment5.css">
 </head>
-<script src="js/script.js"></script>
 <body>
 
 <!-- =====================================================
@@ -83,7 +83,18 @@
 <!-- =====================================================
      DRINKS
      ===================================================== -->
-<section class="section pt-0">
+<section class="container assignment-feature" aria-label="Filter menu">
+  <h2>Explore our menu</h2>
+  <div class="filter-buttons" id="menuFilters">
+    <button class="feature-button selected" type="button" data-category="all" aria-pressed="true">All</button>
+    <button class="feature-button" type="button" data-category="drinks" aria-pressed="false">Drinks</button>
+    <button class="feature-button" type="button" data-category="desserts" aria-pressed="false">Desserts</button>
+    <button class="feature-button" type="button" data-category="breakfast" aria-pressed="false">Breakfast</button>
+  </div>
+  <p id="menuCount" aria-live="polite"></p>
+</section>
+
+<section class="section pt-0 menu-category" data-category="drinks">
   <div class="container">
     <div class="section-heading">
       <h2>Drinks</h2>
@@ -230,7 +241,7 @@
 <!-- =====================================================
      DESSERTS
      ===================================================== -->
-<section class="section">
+<section class="section menu-category" data-category="desserts">
   <div class="container">
     <div class="section-heading">
       <h2>Desserts</h2>
@@ -344,7 +355,7 @@
 <!-- =====================================================
      BREAKFASTS
      ===================================================== -->
-<section class="section">
+<section class="section menu-category" data-category="breakfast">
   <div class="container">
     <div class="section-heading">
       <h2>Breakfasts</h2>
@@ -447,6 +458,18 @@
 <!-- =====================================================
      MENU OF THE DAY (TABLE)
      ===================================================== -->
+<section class="container assignment-feature rating-feature">
+  <h2>Rate your experience</h2>
+  <div id="ratingStars" role="group" aria-label="Rate the cafe from one to five stars">
+    <button type="button" data-rating="1" aria-label="1 star">☆</button>
+    <button type="button" data-rating="2" aria-label="2 stars">☆</button>
+    <button type="button" data-rating="3" aria-label="3 stars">☆</button>
+    <button type="button" data-rating="4" aria-label="4 stars">☆</button>
+    <button type="button" data-rating="5" aria-label="5 stars">☆</button>
+  </div>
+  <p id="ratingMessage" aria-live="polite">Select a star to rate us.</p>
+</section>
+
 <section class="section--tight" style="background: var(--sage);">
   <div class="container">
     <h2 class="mb-4 text-center">Menu of the day</h2>
@@ -522,6 +545,7 @@
 </footer>
 
 <!-- Bootstrap JavaScript -->
+<script src="js/assignment5.js" defer></script>
 <script
   src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
 </script>
