@@ -85,6 +85,17 @@
      ===================================================== -->
 <section class="container assignment-feature" aria-label="Filter menu">
   <h2>Explore our menu</h2>
+
+<input
+    type="text"
+    id="menuSearch"
+    placeholder="Search for food or drinks..."
+    class="form-control mb-3"
+>
+
+<div id="searchSuggestions"></div>
+
+
   <div class="filter-buttons" id="menuFilters">
     <button class="feature-button selected" type="button" data-category="all" aria-pressed="true">All</button>
     <button class="feature-button" type="button" data-category="drinks" aria-pressed="false">Drinks</button>
@@ -105,7 +116,7 @@
       <!-- 1 -->
       <div class="col-12 col-md-6 col-lg-4">
         <div class="card h-100 bloom-bootstrap-card">
-          <img src="images/lavenderlatte.jpg" class="card-img-top" alt="Lavender latte">
+          <img src="images/lavenderlatte.jpg" class="card-img-top" alt="Lavender latte" loading="lazy">
           <div class="card-body d-flex flex-column">
             <h3 class="card-title h5">Lavender Latte</h3>
             <p class="card-text flex-grow-1">Espresso, milk, lavender syrup, foam</p>
@@ -116,7 +127,7 @@
       <!-- 2 -->
       <div class="col-12 col-md-6 col-lg-4">
         <div class="card h-100 bloom-bootstrap-card">
-          <img src="images/latte.jpg" class="card-img-top" alt="Classic latte">
+          <img src="images/latte.jpg" class="card-img-top" alt="Classic latte" loading="lazy">
           <div class="card-body d-flex flex-column">
             <h3 class="card-title h5">Latte</h3>
             <p class="card-text flex-grow-1">Espresso, lots of steamed milk, thin foam layer</p>
@@ -127,7 +138,7 @@
       <!-- 3 -->
       <div class="col-12 col-md-6 col-lg-4">
         <div class="card h-100 bloom-bootstrap-card">
-          <img src="images/icelatte.jpg" class="card-img-top" alt="Refreshing iced latte">
+          <img src="images/icelatte.jpg" class="card-img-top" alt="Refreshing iced latte" loading="lazy">
           <div class="card-body d-flex flex-column">
             <h3 class="card-title h5">Iced Latte</h3>
             <p class="card-text flex-grow-1">Espresso, cold milk, ice cubes</p>
@@ -138,7 +149,7 @@
       <!-- 4 -->
       <div class="col-12 col-md-6 col-lg-4">
         <div class="card h-100 bloom-bootstrap-card">
-          <img src="images/cappuccino.jpg" class="card-img-top" alt="Classic cappuccino">
+          <img src="images/cappuccino.jpg" class="card-img-top" alt="Classic cappuccino" loading="lazy">
           <div class="card-body d-flex flex-column">
             <h3 class="card-title h5">Cappuccino</h3>
             <p class="card-text flex-grow-1">Espresso, steamed milk</p>
@@ -149,7 +160,7 @@
       <!-- 5 -->
       <div class="col-12 col-md-6 col-lg-4">
         <div class="card h-100 bloom-bootstrap-card">
-          <img src="images/americano.jpg" class="card-img-top" alt="Classic Americano coffee">
+          <img src="images/americano.jpg" class="card-img-top" alt="Classic Americano coffee" loading="lazy">
           <div class="card-body d-flex flex-column">
             <h3 class="card-title h5">Americano</h3>
             <p class="card-text flex-grow-1">Espresso, hot water</p>
@@ -160,7 +171,7 @@
       <!-- 6 -->
       <div class="col-12 col-md-6 col-lg-4">
         <div class="card h-100 bloom-bootstrap-card">
-          <img src="images/raf.jpg" class="card-img-top" alt="Classic raf coffee">
+          <img src="images/raf.jpg" class="card-img-top" alt="Classic raf coffee" loading="lazy">
           <div class="card-body d-flex flex-column">
             <h3 class="card-title h5">Raf Coffee</h3>
             <p class="card-text flex-grow-1">Espresso, heavy cream, vanilla sugar</p>
@@ -171,7 +182,7 @@
       <!-- 7 -->
       <div class="col-12 col-md-6 col-lg-4">
         <div class="card h-100 bloom-bootstrap-card">
-          <img src="images/rosebudtea.jpg" class="card-img-top" alt="Hibiscus tea with rose petals">
+          <img src="images/rosebudtea.jpg" class="card-img-top" alt="Hibiscus tea with rose petals" loading="lazy">
           <div class="card-body d-flex flex-column">
             <h3 class="card-title h5">Rosebud Tea</h3>
             <p class="card-text flex-grow-1">Hibiscus, rose petals, honey</p>
@@ -182,7 +193,7 @@
       <!-- 8 -->
       <div class="col-12 col-md-6 col-lg-4">
         <div class="card h-100 bloom-bootstrap-card">
-          <img src="images/matchalatte.jpg" class="card-img-top" alt="Matcha latte">
+          <img src="images/matchalatte.jpg" class="card-img-top" alt="Matcha latte" loading="lazy">
           <div class="card-body d-flex flex-column">
             <h3 class="card-title h5">Matcha Latte</h3>
             <p class="card-text flex-grow-1">Matcha powder, steamed milk, foam</p>
@@ -193,7 +204,7 @@
       <!-- 9 -->
       <div class="col-12 col-md-6 col-lg-4">
         <div class="card h-100 bloom-bootstrap-card">
-          <img src="images/icedmangomatcha.jpg" class="card-img-top" alt="Iced mango matcha latte">
+          <img src="images/icedmangomatcha.jpg" class="card-img-top" alt="Iced mango matcha latte" loading="lazy">
           <div class="card-body d-flex flex-column">
             <h3 class="card-title h5">Iced Mango Matcha</h3>
             <p class="card-text flex-grow-1">Matcha powder, milk, mango puree, ice</p>
@@ -204,7 +215,7 @@
       <!-- 10 -->
       <div class="col-12 col-md-6 col-lg-4">
         <div class="card h-100 bloom-bootstrap-card">
-          <img src="images/frappuccino.jpg" class="card-img-top" alt="Frappuccino">
+          <img src="images/frappuccino.jpg" class="card-img-top" alt="Frappuccino" loading="lazy">
           <div class="card-body d-flex flex-column">
             <h3 class="card-title h5">Frappuccino</h3>
             <p class="card-text flex-grow-1">Blended espresso, milk, ice, whipped cream</p>
@@ -215,7 +226,7 @@
       <!-- 11 -->
       <div class="col-12 col-md-6 col-lg-4">
         <div class="card h-100 bloom-bootstrap-card">
-          <img src="images/mojitolemonade.jpg" class="card-img-top" alt="Mojito lemonade">
+          <img src="images/mojitolemonade.jpg" class="card-img-top" alt="Mojito lemonade" loading="lazy">
           <div class="card-body d-flex flex-column">
             <h3 class="card-title h5">Mojito Lemonade</h3>
             <p class="card-text flex-grow-1">Lime, fresh mint, soda water, sugar syrup</p>
@@ -226,7 +237,7 @@
       <!-- 12 -->
       <div class="col-12 col-md-6 col-lg-4">
         <div class="card h-100 bloom-bootstrap-card">
-          <img src="images/water.jpg" class="card-img-top" alt="Bottle of pure water">
+          <img src="images/water.jpg" class="card-img-top" alt="Bottle of pure water" loading="lazy">
           <div class="card-body d-flex flex-column">
             <h3 class="card-title h5">Water</h3>
             <p class="card-text flex-grow-1">Still or sparkling mineral water</p>
@@ -252,7 +263,7 @@
       <!-- 1 -->
       <div class="col-12 col-md-6 col-lg-4">
         <div class="card h-100 bloom-bootstrap-card">
-          <img src="images/napoleon.jpg" class="card-img-top" alt="Classic Napoleon cake">
+          <img src="images/napoleon.jpg" class="card-img-top" alt="Classic Napoleon cake" loading="lazy">
           <div class="card-body d-flex flex-column">
             <h3 class="card-title h5">Napoleon</h3>
             <p class="card-text flex-grow-1">Crispy puff pastry, delicate vanilla custard cream</p>
@@ -263,7 +274,7 @@
       <!-- 2 -->
       <div class="col-12 col-md-6 col-lg-4">
         <div class="card h-100 bloom-bootstrap-card">
-          <img src="images/newyork.jpg" class="card-img-top" alt="New York cheesecake">
+          <img src="images/newyork.jpg" class="card-img-top" alt="New York cheesecake" loading="lazy">
           <div class="card-body d-flex flex-column">
             <h3 class="card-title h5">New York Cheesecake</h3>
             <p class="card-text flex-grow-1">Cream cheese, buttery biscuit base, vanilla</p>
@@ -274,7 +285,7 @@
       <!-- 3 -->
       <div class="col-12 col-md-6 col-lg-4">
         <div class="card h-100 bloom-bootstrap-card">
-          <img src="images/classic.jpg" class="card-img-top" alt="Classic honey cake">
+          <img src="images/classic.jpg" class="card-img-top" alt="Classic honey cake" loading="lazy">
           <div class="card-body d-flex flex-column">
             <h3 class="card-title h5">Classic Medovik</h3>
             <p class="card-text flex-grow-1">Honey sponge layers, smooth sour cream frosting</p>
@@ -285,7 +296,7 @@
       <!-- 4 -->
       <div class="col-12 col-md-6 col-lg-4">
         <div class="card h-100 bloom-bootstrap-card">
-          <img src="images/cinnabon.jpg" class="card-img-top" alt="Cinnamon roll with cream cheese frosting">
+          <img src="images/cinnabon.jpg" class="card-img-top" alt="Cinnamon roll with cream cheese frosting" loading="lazy">
           <div class="card-body d-flex flex-column">
             <h3 class="card-title h5">Cinnamon Cinnabon</h3>
             <p class="card-text flex-grow-1">Soft cinnamon roll, brown sugar, creamy frosting</p>
@@ -296,7 +307,7 @@
       <!-- 5 -->
       <div class="col-12 col-md-6 col-lg-4">
         <div class="card h-100 bloom-bootstrap-card">
-          <img src="images/eclair.jpg" class="card-img-top" alt="Classic eclair with cream filling">
+          <img src="images/eclair.jpg" class="card-img-top" alt="Classic eclair with cream filling" loading="lazy">
           <div class="card-body d-flex flex-column">
             <h3 class="card-title h5">Eclair</h3>
             <p class="card-text flex-grow-1">Choux pastry, delicate vanilla cream, chocolate glaze</p>
@@ -307,7 +318,7 @@
       <!-- 6 -->
       <div class="col-12 col-md-6 col-lg-4">
         <div class="card h-100 bloom-bootstrap-card">
-          <img src="images/tiramisu.jpg" class="card-img-top" alt="Classic tiramisu">
+          <img src="images/tiramisu.jpg" class="card-img-top" alt="Classic tiramisu" loading="lazy">
           <div class="card-body d-flex flex-column">
             <h3 class="card-title h5">Tiramisu</h3>
             <p class="card-text flex-grow-1">Mascarpone cream, coffee-soaked ladyfingers, cocoa</p>
@@ -318,7 +329,7 @@
       <!-- 7 -->
       <div class="col-12 col-md-6 col-lg-4">
         <div class="card h-100 bloom-bootstrap-card">
-          <img src="images/macarons.jpg" class="card-img-top" alt="Colorful French macarons">
+          <img src="images/macarons.jpg" class="card-img-top" alt="Colorful French macarons" loading="lazy">
           <div class="card-body d-flex flex-column">
             <h3 class="card-title h5">Macarons</h3>
             <p class="card-text flex-grow-1">Almond meringue shells, smooth assorted fillings</p>
@@ -329,7 +340,7 @@
       <!-- 8 -->
       <div class="col-12 col-md-6 col-lg-4">
         <div class="card h-100 bloom-bootstrap-card">
-          <img src="images/chia.jpg" class="card-img-top" alt="Chia pudding with mango">
+          <img src="images/chia.jpg" class="card-img-top" alt="Chia pudding with mango" loading="lazy">
           <div class="card-body d-flex flex-column">
             <h3 class="card-title h5">Chia Pudding with Mango</h3>
             <p class="card-text flex-grow-1">Chia seeds, coconut milk, fresh mango</p>
@@ -340,7 +351,7 @@
       <!-- 9 -->
       <div class="col-12 col-md-6 col-lg-4">
         <div class="card h-100 bloom-bootstrap-card">
-          <img src="images/rawcheesecake.jpg" class="card-img-top" alt="Raw raspberry cheesecake">
+          <img src="images/rawcheesecake.jpg" class="card-img-top" alt="Raw raspberry cheesecake" loading="lazy">
           <div class="card-body d-flex flex-column">
             <h3 class="card-title h5">Raw Raspberry Cheesecake</h3>
             <p class="card-text flex-grow-1">Cashew cream, raspberry, almond-date crust</p>
@@ -366,7 +377,7 @@
       <!-- 1 -->
       <div class="col-12 col-md-6 col-lg-4">
         <div class="card h-100 bloom-bootstrap-card">
-          <img src="images/break1.jpg" class="card-img-top" alt="Bloom Breakfast plate">
+          <img src="images/break1.jpg" class="card-img-top" alt="Bloom Breakfast plate" loading="lazy">
           <div class="card-body d-flex flex-column">
             <h3 class="card-title h5">Bloom Breakfast</h3>
             <p class="card-text flex-grow-1">Poached egg, fresh avocado, toasted sourdough bread</p>
@@ -377,7 +388,7 @@
       <!-- 2 -->
       <div class="col-12 col-md-6 col-lg-4">
         <div class="card h-100 bloom-bootstrap-card">
-          <img src="images/chicken-sandwich.jpg" class="card-img-top" alt="Chicken Sandwich on ciabatta">
+          <img src="images/chicken-sandwich.jpg" class="card-img-top" alt="Chicken Sandwich on ciabatta" loading="lazy">
           <div class="card-body d-flex flex-column">
             <h3 class="card-title h5">Chicken Sandwich</h3>
             <p class="card-text flex-grow-1">Grilled chicken breast, crispy ciabatta, signature sauce</p>
@@ -388,7 +399,7 @@
       <!-- 3 -->
       <div class="col-12 col-md-6 col-lg-4">
         <div class="card h-100 bloom-bootstrap-card">
-          <img src="images/syrniki.jpg" class="card-img-top" alt="Cottage cheese pancakes with sour cream">
+          <img src="images/syrniki.jpg" class="card-img-top" alt="Cottage cheese pancakes with sour cream" loading="lazy">
           <div class="card-body d-flex flex-column">
             <h3 class="card-title h5">Classic Syrniki</h3>
             <p class="card-text flex-grow-1">Cottage cheese pancakes, sour cream, berry jam</p>
@@ -399,7 +410,7 @@
       <!-- 4 -->
       <div class="col-12 col-md-6 col-lg-4">
         <div class="card h-100 bloom-bootstrap-card">
-          <img src="images/english-breakfast.jpg" class="card-img-top" alt="Full English breakfast plate">
+          <img src="images/english-breakfast.jpg" class="card-img-top" alt="Full English breakfast plate" loading="lazy">
           <div class="card-body d-flex flex-column">
             <h3 class="card-title h5">Full English Breakfast</h3>
             <p class="card-text flex-grow-1">Fried eggs, sausages, beans, mushrooms, toasted bread</p>
@@ -410,7 +421,7 @@
       <!-- 5 -->
       <div class="col-12 col-md-6 col-lg-4">
         <div class="card h-100 bloom-bootstrap-card">
-          <img src="images/oatmeal.jpg" class="card-img-top" alt="Oatmeal porridge with fresh berries">
+          <img src="images/oatmeal.jpg" class="card-img-top" alt="Oatmeal porridge with fresh berries" loading="lazy">
           <div class="card-body d-flex flex-column">
             <h3 class="card-title h5">Berry Oatmeal</h3>
             <p class="card-text flex-grow-1">Creamy oats, mixed berries, honey, roasted almonds</p>
@@ -421,7 +432,7 @@
       <!-- 6 -->
       <div class="col-12 col-md-6 col-lg-4">
         <div class="card h-100 bloom-bootstrap-card">
-          <img src="images/shakshuka.jpg" class="card-img-top" alt="Shakshuka with poached eggs and tomatoes">
+          <img src="images/shakshuka.jpg" class="card-img-top" alt="Shakshuka with poached eggs and tomatoes" loading="lazy">
           <div class="card-body d-flex flex-column">
             <h3 class="card-title h5">Shakshuka</h3>
             <p class="card-text flex-grow-1">Eggs poached in spiced tomato sauce, bell peppers, herbs</p>
@@ -432,7 +443,7 @@
       <!-- 7 -->
       <div class="col-12 col-md-6 col-lg-4">
         <div class="card h-100 bloom-bootstrap-card">
-          <img src="images/pancakes.jpg" class="card-img-top" alt="Stack of fluffy pancakes with maple syrup">
+          <img src="images/pancakes.jpg" class="card-img-top" alt="Stack of fluffy pancakes with maple syrup" loading="lazy">
           <div class="card-body d-flex flex-column">
             <h3 class="card-title h5">Fluffy Pancakes</h3>
             <p class="card-text flex-grow-1">American pancakes, maple syrup, fresh blueberries</p>
@@ -443,7 +454,7 @@
       <!-- 8 -->
       <div class="col-12 col-md-6 col-lg-4">
         <div class="card h-100 bloom-bootstrap-card">
-          <img src="images/omelette.jpg" class="card-img-top" alt="Fluffy omelette with spinach and cheese">
+          <img src="images/omelette.jpg" class="card-img-top" alt="Fluffy omelette with spinach and cheese" loading="lazy">
           <div class="card-body d-flex flex-column">
             <h3 class="card-title h5">Spinach &amp; Cheese Omelette</h3>
             <p class="card-text flex-grow-1">Three-egg omelette, fresh spinach, feta cheese, cherry tomatoes</p>
@@ -549,6 +560,25 @@
 <script
   src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
 </script>
+
+<div class="copy-section">
+    <h3>Share The Bloom</h3>
+    <p>Copy our website name and share it!</p>
+
+    <div class="copy-box">
+        <span id="copyText">The Bloom Cafe</span>
+        <button id="copyButton" type="button">
+            Copy
+        </button>
+    </div>
+
+    <p id="copyMessage"></p>
+</div>
+
+<script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+<script src="js/assignment6.js"></script>
+
+<div id="scrollProgress"></div>
 
 </body>
 </html>

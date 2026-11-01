@@ -851,3 +851,177 @@ body {
 .faq-answer.active {
     display: block;
 }
+
+/* Task 2: Autocomplete */
+#searchSuggestions {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.suggestion-item {
+    padding: 12px 15px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+    color: #333;
+}
+
+.suggestion-item:hover {
+    background-color: #f8e8ed;
+    color: #a34f69;
+}
+
+/* Task 3: Search Highlighting */
+.card-title mark {
+    background-color: #ffe66d;
+    color: #333;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+/* Task 4: Scroll Progress Bar */
+#scrollProgress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 7px;
+    background: linear-gradient(
+        90deg,
+        #f4a6b8,
+        #e6c86e,
+        #8dbb9b
+    );
+    z-index: 9999;
+    border-radius: 0 5px 5px 0;
+    transition: width 0.1s;
+}
+
+/* Task 5: Animated Number Counter */
+.bloom-stats {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f9f4ee;
+}
+
+.bloom-stats h2 {
+    color: #304b39;
+    margin-bottom: 35px;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.stat-box {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    width: 220px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.stat-box h3 {
+    font-size: 42px;
+    color: #b66c84;
+    margin-bottom: 10px;
+}
+
+.stat-box p {
+    color: #304b39;
+    font-size: 16px;
+}
+
+/* Task 6: Loading Spinner */
+.loading-spinner {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid white;
+    border-top: 2px solid transparent;
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#reserveSubmit:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* Task 7: Notification System */
+#reservationToast {
+    display: none;
+    position: fixed;
+    top: 30px;
+    right: 25px;
+    background-color: #315743;
+    color: white;
+    padding: 16px 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    z-index: 10000;
+}
+
+/* Task 8: Copy to Clipboard */
+.copy-section {
+    text-align: center;
+    padding: 35px 20px;
+    margin: 40px auto;
+    max-width: 500px;
+    background: #f9f4ee;
+    border-radius: 15px;
+}
+
+.copy-section h3 {
+    color: #304b39;
+}
+
+.copy-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+#copyButton {
+    background: #315743;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#copyButton:hover {
+    background: #46795c;
+}
+
+#copyMessage {
+    color: #315743;
+    margin-top: 12px;
+}
+
+/* Task 9: Lazy Loading */
+img[loading="lazy"] {
+    transition: opacity 0.5s ease;
+}
+
+img[loading="lazy"].image-loaded {
+    opacity: 1;
+}
