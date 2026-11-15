@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
     <head>
         <meta charset="utf-8"/>
@@ -10,45 +11,43 @@
     <body>
         <header class="final-header">
             <a class="final-brand" href="index.html">
-                <img alt="Bloom logo" src="images/logo.svg"/>
-                The Bloom
-            </a>
-            <nav class="final-nav">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="menu.html">Menu</a>
-                <a href="reserve.html">Reserve</a>
-                <a href="contact.html">Contact</a>
-                <a class="bloom-nav-link auth-guest" href="signup.html">Sign Up</a>
-                <a class="bloom-nav-link auth-guest" href="login.html">Log In</a>
-                <a class="bloom-nav-link auth-user" href="profile.html">Profile</a>
-                <button class="bloom-nav-link auth-user logout-link" id="navLogout" type="button">Log Out</button>
-            </nav>
-            <button class="theme-control" id="themeToggle" type="button">Dark mode</button>
-        </header>
-        <main class="final-main">
-            <section class="final-panel">
-                <h1>Contact us</h1>
-                <p>Have a question about The Bloom? Send us a message.</p>
-                <form id="contactForm" novalidate="">
-                    <label for="name">Full name</label>
-                    <input id="name" name="name" placeholder="" type="text"/>
-                    <small class("field-error") id("name-error")></small>
-                    <label for("email")>Email</label>
-                    <input id("email") name("email") placeholder("") type("text")/>
-                    <small class("field-error") id("email-error")></small>
-                    <label for("phone")>Phone</label>
-                    <input id("phone") name("phone") placeholder("+7 777 123 45 67") type("tel")/>
-                    <small class("field-error") id("phone-error")></small>
-                    <label for("message")>Your message</label>
-                    <textarea id("message") rows("4")></textarea>
-                    <small class("field-error") id("message-error")></small>
-                    <button class("final-button")>Send Message</button>
-                    <p aria-live("polite") class("form-message") id("formMessage")></p>
-                </form>
-            </section>
-        </main>
-        <footer class("final-footer")>The Bloom Café · Made with care in Astana</footer>
-        <script defer="" src("js/final.js")></script>
-    </body>
-</html>
+                <img alt="Bloom logo" src="images/logo.svg"/>The Bloom</a>
+                <nav class="final-nav">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="menu.html">Menu</a>
+                    <a href="reserve.html">Reserve</a>
+                    <a href="contact.html">Contact</a>
+                    <a class="bloom-nav-link auth-guest" href="signup.html">Sign Up</a>
+                    <a class="bloom-nav-link auth-guest" href="login.html">Log In</a>
+                    <a class="bloom-nav-link auth-user" href="profile.html">Profile</a>
+                    <button class="bloom-nav-link auth-user logout-link" id="navLogout" type="button">Log Out</button>
+                </nav>
+                <button class="theme-control" id="themeToggle" type="button">Dark mode</button>
+            </header>
+            <main class="final-main">
+                <section class="final-panel">
+                    <h1>Contact us</h1>
+                    <p>Have a question about The Bloom? Send us a message.</p>
+                    <form id="contactForm" novalidate="">
+                        <label for="name">Full name</label>
+                        <input id="name" name="name" placeholder="" type="text"/>
+                        <small class="field-error" id="name-error"></small>
+                        <label for="email">Email</label>
+                        <input id="email" name="email" placeholder="" type="text"/>
+                        <small class="field-error" id="email-error"></small>
+                        <label for="phone">Phone</label>
+                        <input id="phone" name="phone" placeholder="+7 777 123 45 67" type="tel"/>
+                        <small class="field-error" id="phone-error"></small>
+                        <label for="message">Your message</label>
+                        <textarea id="message" rows="4"></textarea>
+                        <small class="field-error" id="message-error"></small>
+                        <button class="final-button">Send Message</button>
+                        <p aria-live="polite" class("form-message" id("formMessage"></p>
+                    </form>
+                </section>
+            </main>
+            <footer class("final-footer">The Bloom Café · Made with care in Astana</footer>
+            <script defer="" src("js/final.js"></script>
+        </body>
+    </html>
