@@ -23,10 +23,12 @@ function validate(form, names) {
     let message = !value ? 'This field is required.' : '';
     if (!message && name === 'email' && !emailOK(value)) message = 'Please enter a valid email.';
     if (!message && name === 'phone' && !phoneOK(value)) message = 'Enter a valid phone number with at least 10 digits.';
-    if (!message && name === 'password' && !passwordOK(value)) message = 'Use 8+ characters with uppercase, lowercase and a number.';
+    if (!message && name === 'password' && form.id !== 'loginForm' && !passwordOK(value)) message = 'Use 8+ characters with uppercase, lowercase and a number.';
+    if (!message && name === 'message' && value.length < 5) message = 'Please write at least 5 characters.';
     if (!message && name === 'name' && value.length < 2) message = 'Please enter at least 2 characters.';
+    if (!message && name === 'time' && !/^([01]\d|2[0-3]):[0-5]\d$/.test(value)) message = 'Choose a valid time.';
     if (!message && name === 'guests' && (!Number.isInteger(Number(value)) || Number(value)<1 || Number(value)>20)) message = 'Choose between 1 and 20 guests.';
-    if (!message && name === 'date' && value < [new Date().getFullYear(),String(new Date().getMonth()+1).padStart(2,'0'),String(new Date().getDate()).padStart(2,'0')].join('-')) message = 'Please choose a future date.';
+    if (!message && name === 'date' && (!/^\d{4}-\d{2}-\d{2}$/.test(value) || value < new Date(Date.now()-new Date().getTimezoneOffset()*60000).toISOString().slice(0,10))) message = 'Please choose today or a future date.';
     error.textContent = message; input.setAttribute('aria-invalid',String(Boolean(message)));
     if (message) valid = false;
   }
@@ -36,20 +38,22 @@ const signup = document.getElementById('signupForm');
 if (signup) signup.addEventListener('submit', e => {
   e.preventDefault(); if (!validate(signup,['name','email','phone','password'])) return;
   const user = {name:signup.querySelector('#name').value.trim(),email:signup.querySelector('#email').value.trim().toLowerCase(),phone:signup.querySelector('#phone').value.trim(),password:signup.querySelector('#password').value};
+  const existing = JSON.parse(localStorage.getItem('bloom-user') || 'null');
+  if (existing && existing.email === user.email) { document.getElementById('formMessage').textContent = 'This email is already registered. Please log in.'; return; }
   localStorage.setItem('bloom-user',JSON.stringify(user));
   localStorage.setItem('bloom-session',user.email); location.href='profile.html';
 });
 const login = document.getElementById('loginForm');
 if (login) login.addEventListener('submit', e => {
   e.preventDefault(); if (!validate(login,['email','password'])) return;
-  const user=JSON.parse(localStorage.getItem('bloom-user')||'null');
+  let user=null; try { user=JSON.parse(localStorage.getItem('bloom-user')||'null'); } catch (_) { user=null; }
   if (user && user.email===login.querySelector('#email').value.trim().toLowerCase() && user.password===login.querySelector('#password').value) {
     localStorage.setItem('bloom-session',user.email);location.href='profile.html';
   } else document.getElementById('formMessage').textContent='Incorrect email or password. Please try again.';
 });
 const profile=document.getElementById('profileDetails');
 if (profile) {
-  const user=JSON.parse(localStorage.getItem('bloom-user')||'null');
+  let user=null; try { user=JSON.parse(localStorage.getItem('bloom-user')||'null'); } catch (_) { user=null; }
   const session=localStorage.getItem('bloom-session');
   if (!user || session!==user.email) {profile.textContent='Please log in to view your profile.';document.getElementById('logoutButton').hidden=true;}
   else {for(const [label,value] of [['Name',user.name],['Email',user.email],['Phone',user.phone]]) {const p=document.createElement('p');p.textContent=label+': '+value;profile.append(p);}}
@@ -105,7 +109,7 @@ if(weatherButton) weatherButton.addEventListener('click',async()=>{
 // Small existing content interactions retained where they work.
 const readMore=document.getElementById('readMoreButton');
 if(readMore)readMore.addEventListener('click',()=>{const extra=document.getElementById('extraStory');if(!extra)return;extra.hidden=!extra.hidden;readMore.textContent=extra.hidden?'Read More':'Read Less';});
-for(const question of document.querySelectorAll('.faq-question'))question.addEventListener('click',()=>{const answer=question.nextElementSibling;if(answer)answer.classList.toggle('active');});
+for(const question of document.querySelectorAll('.faq-question'))question.addEventListener('click',()=>{const answer=question.nextElementSibling;if(answer){const expanded=answer.classList.toggle('active');question.setAttribute('aria-expanded',String(expanded));}});
 
 // Show the correct navigation options for the current local demo session.
 function updateAuthNavigation() {
