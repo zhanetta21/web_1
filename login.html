@@ -1,20 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
   <title>Log in — The Bloom</title>
-  <link rel="stylesheet" href="css/a.css" />
-  <link rel="stylesheet" href="css/final.css" />
+  <link href="css/a.css" rel="stylesheet"/>
+  <link href="css/final.css" rel="stylesheet"/>
 </head>
 <body>
-
   <header class="final-header">
     <a class="final-brand" href="index.html">
-      <img src="images/logo.svg" alt="Bloom logo" />
+      <img alt="Bloom logo" src="images/logo.svg"/>
       The Bloom
     </a>
-
     <nav class="final-nav">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -26,7 +24,6 @@
       <a class="bloom-nav-link auth-user" href="profile.html">Profile</a>
       <button class="bloom-nav-link auth-user logout-link" id="navLogout" type="button">Log Out</button>
     </nav>
-
     <button class="theme-control" id="themeToggle" type="button">Dark mode</button>
   </header>
 
@@ -34,28 +31,21 @@
     <section class="final-panel">
       <h1>Log in</h1>
       <p>Welcome back!</p>
-
-      <form id="loginForm" novalidate>
+      <form id="loginForm" novalidate="">
         <label for="email">Email</label>
-        <input id="email" name="email" type="text" placeholder="" />
+        <input id="email" name="email" placeholder="" type="text"/>
         <small class="field-error" id="email-error"></small>
-
         <label for="password">Password</label>
-        <input id="password" name="password" type="password" placeholder="" />
+        <input id="password" name="password" placeholder="" type="password"/>
         <small class="field-error" id="password-error"></small>
-
-        <button class="final-button" type="submit">Log In</button>
-        <p class="form-message" id="formMessage" aria-live="polite"></p>
+        <button class="final-button">Log In</button>
+        <p aria-live="polite" class="form-message" id="formMessage"></p>
       </form>
-
       <p>New here? <a href="signup.html">Create an account</a></p>
     </section>
   </main>
 
-  <footer class="final-footer">
-    The Bloom Café · Made with care in Astana
-  </footer>
-
-  <script defer src="js/final.js"></script>
+  <footer class="final-footer">The Bloom Café · Made with care in Astana</footer>
+  <script defer="" src="js/final.js"></script>
 </body>
 </html>
