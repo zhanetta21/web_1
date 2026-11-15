@@ -1,20 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
   <title>Create an account — The Bloom</title>
-  <link rel="stylesheet" href="css/a.css" />
-  <link rel="stylesheet" href="css/final.css" />
+  <link href="css/a.css" rel="stylesheet"/>
+  <link href="css/final.css" rel="stylesheet"/>
 </head>
 <body>
-
   <header class="final-header">
     <a class="final-brand" href="index.html">
-      <img src="images/logo.svg" alt="Bloom logo" />
+      <img alt="Bloom logo" src="images/logo.svg"/>
       The Bloom
     </a>
-
     <nav class="final-nav">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -26,7 +24,6 @@
       <a class="bloom-nav-link auth-user" href="profile.html">Profile</a>
       <button class="bloom-nav-link auth-user logout-link" id="navLogout" type="button">Log Out</button>
     </nav>
-
     <button class="theme-control" id="themeToggle" type="button">Dark mode</button>
   </header>
 
@@ -34,34 +31,30 @@
     <section class="final-panel">
       <h1>Create an account</h1>
       <p>Join The Bloom to keep your details in one place.</p>
-
-      <form id="signupForm" novalidate>
+      <form id="signupForm" novalidate="">
         <label for="name">Full name</label>
-        <input id="name" name="name" type="text" placeholder="" />
+        <input id="name" name="name" placeholder="" type="text"/>
         <small class="field-error" id="name-error"></small>
 
         <label for="email">Email</label>
-        <input id="email" name="email" type="text" placeholder="you@example.com" />
+        <input id="email" name="email" placeholder="you@example.com" type="text"/>
         <small class="field-error" id="email-error"></small>
 
         <label for="phone">Phone</label>
-        <input id="phone" name="phone" type="tel" placeholder="+7 777 123 45 67" />
+        <input id="phone" name="phone" placeholder="+7 777 123 45 67" type="tel"/>
         <small class="field-error" id="phone-error"></small>
 
         <label for="password">Password</label>
-        <input id="password" name="password" type="password" placeholder="8+ characters, uppercase, lowercase and number" />
+        <input id="password" name="password" placeholder="8+ characters, uppercase, lowercase and number" type="password"/>
         <small class="field-error" id="password-error"></small>
 
-        <button class="final-button" type="submit">Sign Up</button>
-        <p class="form-message" id="formMessage" aria-live="polite"></p>
+        <button class="final-button">Sign Up</button>
+        <p aria-live="polite" class="form-message" id="formMessage"></p>
       </form>
     </section>
   </main>
 
-  <footer class="final-footer">
-    The Bloom Café · Made with care in Astana
-  </footer>
-
-  <script defer src="js/final.js"></script>
+  <footer class="final-footer">The Bloom Café · Made with care in Astana</footer>
+  <script defer="" src="js/final.js"></script>
 </body>
 </html>

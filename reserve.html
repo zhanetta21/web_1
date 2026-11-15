@@ -1,62 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8"/>
-        <meta content="width=device-width,initial-scale=1" name="viewport"/>
-        <title>Reserve a table — The Bloom</title>
-        <link href="css/a.css" rel="stylesheet"/>
-        <link href="css/final.css" rel="stylesheet"/>
-    </head>
-    <body>
-        <header class="final-header">
-            <a class="final-brand" href="index.html">
-                <img alt="Bloom logo" src="images/logo.svg"/>
-                The Bloom
-            </a>
-            <nav class="final-nav">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="menu.html">Menu</a>
-                <a href="reserve.html">Reserve</a>
-                <a href="contact.html">Contact</a>
-                <a class="bloom-nav-link auth-guest" href="signup.html">Sign Up</a>
-                <a class="bloom-nav-link auth-guest" href="login.html">Log In</a>
-                <a class="bloom-nav-link auth-user" href="profile.html">Profile</a>
-                <button class="bloom-nav-link auth-user logout-link" id="navLogout" type="button">Log Out</button>
-            </nav>
-            <button class="theme-control" id="themeToggle" type="button">Dark mode</button>
-        </header>
-        <main class="final-main">
-            <section class="final-panel">
-                <h1>Reserve a table</h1>
-                <p>Plan a visit to our café. This is a demo reservation, not a confirmed booking.</p>
-                <form id="reserveForm" novalidate="">
-                    <label for("name">Full name</label>
-                    <input id("name") name("name") placeholder("") type("text")/>
-                    <small class("field-error") id("name-error")></small>
-                    <label for("email">Email</label>
-                    <input id("email") name("email") placeholder("") type("text")/>
-                    <small class("field-error") id("email-error")></small>
-                    <label for("phone">Phone</label>
-                    <input id("phone") name("phone") placeholder("+7 777 123 45 67") type("tel")/>
-                    <small class("field-error") id("phone-error")></small>
-                    <label for("date">Date</label>
-                    <input id("date") name("date") placeholder("") type("date")/>
-                    <small class("field-error") id("date-error")></small>
-                    <label for("time">Time</label>
-                    <input id("time") name("time") placeholder("") type("time")/>
-                    <small class("field-error") id("time-error")></small>
-                    <label for("guests">Number of guests</label>
-                    <input id("guests") name("guests") placeholder("") type("number")/>
-                    <small class("field-error") id("guests-error")></small>
-                    <button class("final-button">Request Reservation</button>
-                    <p aria-live("polite") class("form-message") id("formMessage")></p>
-                </form>
-            </section>
-        </main>
-        <footer class="final-footer">
-            The Bloom Café · Made with care in Astana
-        </footer>
-        <script defer="" src="js/final.js"></script>
-    </body>
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>Reserve a table — The Bloom</title>
+  <link href="css/a.css" rel="stylesheet"/>
+  <link href="css/final.css" rel="stylesheet"/>
+</head>
+<body>
+  <header class="final-header">
+    <a class="final-brand" href="index.html">
+      <img alt="Bloom logo" src="images/logo.svg"/>
+      The Bloom
+    </a>
+    <nav class="final-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="menu.html">Menu</a>
+      <a href="reserve.html">Reserve</a>
+      <a href="contact.html">Contact</a>
+      <a class="bloom-nav-link auth-guest" href="signup.html">Sign Up</a>
+      <a class="bloom-nav-link auth-guest" href="login.html">Log In</a>
+      <a class="bloom-nav-link auth-user" href="profile.html">Profile</a>
+      <button class="bloom-nav-link auth-user logout-link" id="navLogout" type="button">Log Out</button>
+    </nav>
+    <button class="theme-control" id="themeToggle" type="button">Dark mode</button>
+  </header>
+
+  <main class="final-main">
+    <section class="final-panel">
+      <h1>Reserve a table</h1>
+      <p>Plan a visit to our café. This is a demo reservation, not a confirmed booking.</p>
+      <form id="reserveForm" novalidate="">
+        <label for="name">Full name</label>
+        <input id="name" name="name" placeholder="" type="text"/>
+        <small class="field-error" id="name-error"></small>
+
+        <label for="email">Email</label>
+        <input id="email" name="email" placeholder="" type="text"/>
+        <small class="field-error" id="email-error"></small>
+
+        <label for="phone">Phone</label>
+        <input id="phone" name="phone" placeholder="+7 777 123 45 67" type="tel"/>
+        <small class="field-error" id="phone-error"></small>
+
+        <label for="date">Date</label>
+        <input id="date" name="date" placeholder="" type="date"/>
+        <small class="field-error" id="date-error"></small>
+
+        <label for="time">Time</label>
+        <input id="time" name="time" placeholder="" type="time"/>
+        <small class="field-error" id="time-error"></small>
+
+        <label for="guests">Number of guests</label>
+        <input id="guests" name="guests" placeholder="" type="number"/>
+        <small class="field-error" id="guests-error"></small>
+
+        <button class="final-button">Request Reservation</button>
+        <p aria-live="polite" class="form-message" id="formMessage"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="final-footer">The Bloom Café · Made with care in Astana</footer>
+  <script defer="" src="js/final.js"></script>
+</body>
 </html>
