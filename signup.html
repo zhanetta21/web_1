@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Create an account — The Bloom</title>
+  <link rel="stylesheet" href="css/a.css" />
+  <link rel="stylesheet" href="css/final.css" />
+</head>
+<body>
+
+  <header class="final-header">
+    <a class="final-brand" href="index.html">
+      <img src="images/logo.svg" alt="Bloom logo" />
+      The Bloom
+    </a>
+
+    <nav class="final-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="menu.html">Menu</a>
+      <a href="reserve.html">Reserve</a>
+      <a href="contact.html">Contact</a>
+      <a class="bloom-nav-link auth-guest" href="signup.html">Sign Up</a>
+      <a class="bloom-nav-link auth-guest" href="login.html">Log In</a>
+      <a class="bloom-nav-link auth-user" href="profile.html">Profile</a>
+      <button class="bloom-nav-link auth-user logout-link" id="navLogout" type="button">Log Out</button>
+    </nav>
+
+    <button class="theme-control" id="themeToggle" type="button">Dark mode</button>
+  </header>
+
+  <main class="final-main">
+    <section class="final-panel">
+      <h1>Create an account</h1>
+      <p>Join The Bloom to keep your details in one place.</p>
+
+      <form id="signupForm" novalidate>
+        <label for="name">Full name</label>
+        <input id="name" name="name" type="text" placeholder="" />
+        <small class="field-error" id="name-error"></small>
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="text" placeholder="you@example.com" />
+        <small class="field-error" id="email-error"></small>
+
+        <label for="phone">Phone</label>
+        <input id="phone" name="phone" type="tel" placeholder="+7 777 123 45 67" />
+        <small class="field-error" id="phone-error"></small>
+
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" placeholder="8+ characters, uppercase, lowercase and number" />
+        <small class="field-error" id="password-error"></small>
+
+        <button class="final-button" type="submit">Sign Up</button>
+        <p class="form-message" id="formMessage" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="final-footer">
+    The Bloom Café · Made with care in Astana
+  </footer>
+
+  <script defer src="js/final.js"></script>
+</body>
+</html>
